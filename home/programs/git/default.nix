@@ -14,4 +14,5 @@
       signByDefault = true;
     };
   };
+  programs.gh.enable = true;
 }
