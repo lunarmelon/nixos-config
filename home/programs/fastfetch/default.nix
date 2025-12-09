@@ -1,0 +1,107 @@
+{
+  programs.fastfetch = {
+    enable = true;
+    settings = {
+      schema = "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json";
+      logo = {
+        source = ./assets/Gengar.png;
+        type = "kitty-direct";
+        padding = {
+          top = 1;
+          left = 3;
+        };
+      };
+      display = {
+        separator = " ";
+      };
+      modules = [
+        "break"
+        "break"
+        {
+          type = "custom";
+          format = builtins.fromJSON ''"\u001b[0;38;2;135;95;255;49m󱁇 \u001b[0;38;2;205;214;244;49mmelon"'';
+        }
+        {
+          type = "custom";
+          format = "┌─────────────────────────────────────────────┐";
+          keyColor = "white";
+        }
+        {
+          type = "os";
+          key = "   ";
+          format = "{3}";
+          keyColor = "magenta";
+        }
+        {
+          type = "kernel";
+          key = "   ";
+          format = "{1} {2}";
+          keyColor = "magenta";
+        }
+        {
+          type = "packages";
+          key = "   ";
+          keyColor = "magenta";
+        }
+        {
+          type = "custom";
+          format = "  ── ── ── ── ── ── ── ── ── ── ── ── ── ──";
+          keyColor = "white";
+        }
+        {
+          type = "terminal";
+          key = "   ";
+          format = "{5}";
+          keyColor = "magenta";
+        }
+        {
+          type = "shell";
+          key = "   ";
+          keyColor = "magenta";
+        }
+        {
+          type = "de";
+          key = "  󰧨 ";
+          keyColor = "magenta";
+        }
+        {
+          type = "wm";
+          key = "   ";
+          keyColor = "magenta";
+        }
+        {
+          type = "custom";
+          format = "  ── ── ── ── ── ── ── ── ── ── ── ── ── ──";
+          keyColor = "white";
+        }
+        {
+          type = "cpu";
+          key = "   ";
+          format = "{1}";
+          keyColor = "magenta";
+        }
+        {
+          type = "gpu";
+          key = "  󰍹 ";
+          format = "{2}";
+          keyColor = "magenta";
+        }
+        {
+          type = "memory";
+          key = "   ";
+          format = "{1} /{4} {2}";
+          keyColor = "magenta";
+        }
+        {
+          type = "custom";
+          format = "└─────────────────────────────────────────────┘";
+          keyColor = "white";
+        }
+        {
+          type = "custom";
+          format = builtins.fromJSON ''"\u001b[38;5;1m▂▂  \u001b[38;5;2m▂▂  \u001b[38;5;3m▂▂  \u001b[38;5;4m▂▂  \u001b[38;5;5m▂▂  \u001b[38;5;6m▂▂  \u001b[38;5;7m▂▂  \u001b[38;5;8m▂▂"'';
+        }
+      ];
+    };
+  };
+}

@@ -1,0 +1,22 @@
+{
+  imports = [
+    ./blink.nix
+    ./color-theme.nix
+    ./conform.nix
+    ./gitsigns.nix
+    ./indent-blankline.nix
+    ./lint.nix
+    ./lsp.nix
+    ./lualine.nix
+    ./mini-clue.nix
+    ./mini-comment.nix
+    ./mini-files.nix
+    ./mini-icons.nix
+    ./mini-pairs.nix
+    ./mini-surround.nix
+    ./mini-tabline.nix
+    ./misc.nix
+    ./noice.nix
+    ./treesitter.nix
+  ];
+}
