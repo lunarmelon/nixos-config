@@ -28,7 +28,11 @@
       size = 1000000;
     };
 
-    historySubstringSearch.enable = true;
+    historySubstringSearch = {
+      enable = true;
+      searchDownKey = ["^[[B" "$terminfo[kcud1]"];
+      searchUpKey = ["^[[A" "$terminfo[kcuu1]"];
+    };
 
     setOptions = [
       "nobeep"
