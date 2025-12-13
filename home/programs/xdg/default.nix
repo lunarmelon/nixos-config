@@ -52,5 +52,6 @@ in {
       extraPortals = with pkgs; [kdePackages.xdg-desktop-portal-kde];
       config.common.default = "kde";
     };
+    configFile."mimeapps.list".force = true;
   };
 }
