@@ -1,17 +1,10 @@
 {
-  lsp.servers.nil_ls = {
+  plugins.lsp.servers.nil_ls = {
     enable = true;
-    config = {
-      settings = {
-        filetypes = ["nix"];
-        nil = {
-          nix = {
-            flake = {
-              autoArchive = true;
-              autoEvalInputs = true;
-            };
-          };
-        };
+    settings = {
+      nil.nix.flake = {
+        autoArchive = true;
+        autoEvalInputs = true;
       };
     };
   };

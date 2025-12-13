@@ -6,7 +6,6 @@
     ./gitsigns.nix
     ./indent-blankline.nix
     ./lint.nix
-    ./lsp.nix
     ./lualine.nix
     ./mini-clue.nix
     ./mini-comment.nix

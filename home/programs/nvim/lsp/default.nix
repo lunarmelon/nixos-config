@@ -1,7 +1,8 @@
 {
   imports = [./servers];
-  plugins.lsp.enable = true;
-  lsp = {
+  plugins.schemastore.enable = true;
+  plugins.lsp = {
+    enable = true;
     servers = {
       astro.enable = true;
       bashls.enable = true;
