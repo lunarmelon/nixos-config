@@ -1,3 +1,6 @@
 {
-  imports = [./nil_ls];
+  imports = [
+    ./nil_ls
+    ./jsonls
+  ];
 }

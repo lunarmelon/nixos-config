@@ -11,7 +11,6 @@
       cssls.enable = true;
       emmet_ls.enable = true;
       html.enable = true;
-      jsonls.enable = true;
       lua_ls.enable = true;
       marksman.enable = true;
       ruff.enable = true;
