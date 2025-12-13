@@ -17,17 +17,11 @@
       url = "github:nix-community/nixvim/nixos-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # Nix User Repository
-    nur = {
-      url = "github:nix-community/NUR";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = inputs @ {
     nixpkgs,
     home-manager,
-    nur,
     ...
   }: {
     nixosConfigurations = {
@@ -47,7 +41,6 @@
             # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
             home-manager.extraSpecialArgs = {inherit inputs;};
           }
-          nur.modules.nixos.default
         ];
       };
     };
