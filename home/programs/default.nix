@@ -5,6 +5,7 @@
     ./git
     ./gpg
     ./kitty
+    ./lazygit
     ./librewolf
     ./oh-my-posh
     ./xdg
