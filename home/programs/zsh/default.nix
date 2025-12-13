@@ -11,8 +11,8 @@
 
     shellAliases = {
       nv = "nvim";
-      ls = "eza --group-directories-first --icons";
-      ll = "ls -lh --git";
+      ls = "eza";
+      ll = "ls -lh";
     };
 
     dotDir = "${config.xdg.configHome}/zsh";
