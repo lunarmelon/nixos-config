@@ -19,9 +19,6 @@
     zip
     unzip
 
-    # utils
-    ripgrep # recursively searches directories for a regex pattern
-
     # misc
     which
     gnutar
@@ -32,7 +29,6 @@
     # system tools
     pciutils # lspci
     usbutils # lsusb
-    fastfetch
 
     alejandra
     deadnix
