@@ -39,6 +39,8 @@
     statix
   ];
 
+  home.shell.enableZshIntegration = true;
+
   programs.nixvim = {
     enable = true;
     defaultEditor = true;

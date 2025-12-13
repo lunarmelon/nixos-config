@@ -1,7 +1,6 @@
 {
   programs.lazygit = {
     enable = true;
-    enableZshIntegration = true;
     settings = {
       gui = {
         nerdFontsVersion = 3;
