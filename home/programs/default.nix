@@ -7,6 +7,7 @@
     ./kitty
     ./lazygit
     ./librewolf
+    ./mpv
     ./oh-my-posh
     ./xdg
     ./zsh
