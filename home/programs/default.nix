@@ -4,6 +4,7 @@
     ./fastfetch
     ./git
     ./gpg
+    ./keepassxc
     ./kitty
     ./lazygit
     ./librewolf
@@ -13,8 +14,6 @@
     ./zsh
   ];
   home.packages = with pkgs; [
-    keepassxc
-
     # archives
     zip
     unzip
