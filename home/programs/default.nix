@@ -21,7 +21,6 @@
 
     # utils
     ripgrep # recursively searches directories for a regex pattern
-    fzf # A command-line fuzzy finder
 
     # misc
     which
