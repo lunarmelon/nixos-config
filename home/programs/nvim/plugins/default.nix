@@ -1,6 +1,7 @@
 {
   imports = [
     ./blink
+    ./colorizer
     ./colorscheme
     ./conform
     ./gitsigns
@@ -11,6 +12,7 @@
     ./mini
     ./misc
     ./noice
+    ./todo-comments
     ./treesitter
   ];
 }
