@@ -10,7 +10,6 @@
     ./lint
     ./lualine
     ./mini
-    ./misc
     ./noice
     ./todo-comments
     ./treesitter
