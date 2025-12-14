@@ -1,4 +1,8 @@
 {
+  lib,
+  pkgs,
+  ...
+}: {
   plugins.lint = {
     enable = true;
     autoCmd = {
@@ -16,11 +20,39 @@
         "InsertLeave"
       ];
     };
+    linters = {
+      deadnix = {
+        cmd = lib.getExe pkgs.deadnix;
+      };
+      htmlhint = {
+        cmd = lib.getExe pkgs.htmlhint;
+      };
+      selene = {
+        cmd = lib.getExe pkgs.deadnix;
+      };
+      shellcheck = {
+        cmd = lib.getExe pkgs.shellcheck;
+      };
+      statix = {
+        cmd = lib.getExe pkgs.statix;
+      };
+    };
     lintersByFt = {
+      css = ["biomejs"];
+      html = ["htmlhint"];
+      javascript = ["biomejs"];
+      javascriptreact = ["biomejs"];
+      json = ["biomejs"];
+      jsonc = ["biomejs"];
+      lua = ["selene"];
       nix = [
         "deadnix"
         "statix"
       ];
+      python = ["ruff"];
+      sh = ["shellcheck"];
+      typescript = ["biomejs"];
+      typescriptreact = ["biomejs"];
     };
   };
 }
