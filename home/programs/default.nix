@@ -29,10 +29,6 @@
     # system tools
     pciutils # lspci
     usbutils # lsusb
-
-    alejandra
-    deadnix
-    statix
   ];
 
   home.shell.enableZshIntegration = true;
