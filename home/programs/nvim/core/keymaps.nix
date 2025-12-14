@@ -93,5 +93,17 @@
         desc = "Open in last used state";
       };
     }
+
+    # Lazygit
+    {
+      mode = "n";
+      action = ":LazyGit<CR>";
+      key = "<leader>lg";
+      options = {
+        noremap = true;
+        silent = true;
+        desc = "Open LazyGit";
+      };
+    }
   ];
 }

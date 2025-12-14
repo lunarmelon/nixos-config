@@ -5,6 +5,7 @@
     ./conform.nix
     ./gitsigns.nix
     ./indent-blankline.nix
+    ./lazygit.nix
     ./lint.nix
     ./lualine.nix
     ./mini-clue.nix
