@@ -13,5 +13,6 @@
     ./noice
     ./todo-comments
     ./treesitter
+    ./typescript-tools
   ];
 }
