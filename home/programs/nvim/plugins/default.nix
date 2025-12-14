@@ -1,22 +1,16 @@
 {
   imports = [
-    ./blink.nix
-    ./color-theme.nix
-    ./conform.nix
-    ./gitsigns.nix
-    ./indent-blankline.nix
-    ./lazygit.nix
-    ./lint.nix
-    ./lualine.nix
-    ./mini-clue.nix
-    ./mini-comment.nix
-    ./mini-files.nix
-    ./mini-icons.nix
-    ./mini-pairs.nix
-    ./mini-surround.nix
-    ./mini-tabline.nix
-    ./misc.nix
-    ./noice.nix
-    ./treesitter.nix
+    ./blink
+    ./colorscheme
+    ./conform
+    ./gitsigns
+    ./indent-blankline
+    ./lazygit
+    ./lint
+    ./lualine
+    ./mini
+    ./misc
+    ./noice
+    ./treesitter
   ];
 }

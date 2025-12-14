@@ -1,6 +1,6 @@
 {
-  plugins.luasnip.enable = true;
   plugins = {
+    luasnip.enable = true;
     blink-cmp = {
       enable = true;
       settings = {
@@ -16,9 +16,9 @@
           "<CR>" = [
             "accept"
             "fallback"
-
           ];
         };
+        signature.enabled = true;
         appearance = {
           nerd_font_variant = "mono";
           kind_icons = {
