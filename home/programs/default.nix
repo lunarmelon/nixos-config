@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   imports = [
     ./brave-browser
+    ./bun
     ./fastfetch
     ./git
     ./gpg
