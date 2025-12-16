@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   imports = [
+    ./alacritty
     ./brave-browser
     ./bun
     ./fastfetch
