@@ -41,6 +41,7 @@
 
     zplug = {
       enable = true;
+      zplugHome = "${config.xdg.dataHome}/zplug";
       plugins = [
         {name = "Aloxaf/fzf-tab";}
         {name = "zdharma-continuum/fast-syntax-highlighting";}
