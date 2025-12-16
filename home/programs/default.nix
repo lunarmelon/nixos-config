@@ -10,6 +10,7 @@
     ./lazygit
     ./librewolf
     ./mpv
+    ./npm
     ./oh-my-posh
     ./utils
     ./xdg
