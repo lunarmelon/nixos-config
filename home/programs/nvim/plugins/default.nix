@@ -12,6 +12,7 @@
     ./lz-n
     ./mini
     ./noice
+    ./schemastore
     ./todo-comments
     ./treesitter
     ./typescript-tools
