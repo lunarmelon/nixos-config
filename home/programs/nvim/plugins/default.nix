@@ -9,6 +9,7 @@
     ./lazygit
     ./lint
     ./lualine
+    ./lz-n
     ./mini
     ./noice
     ./todo-comments
