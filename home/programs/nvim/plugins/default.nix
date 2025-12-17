@@ -10,6 +10,7 @@
     ./lint
     ./lualine
     ./lz-n
+    ./markview
     ./mini
     ./noice
     ./schemastore
