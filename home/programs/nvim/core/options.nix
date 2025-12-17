@@ -1,4 +1,12 @@
 {
+  performance = {
+    byteCompileLua = {
+      enable = true;
+      nvimRuntime = true;
+      configs = true;
+      plugins = true;
+    };
+  };
   opts = {
     autoindent = false; # Copy indent from current line when starting new one (default: true)
     breakindent = true; # Enable break indent (default: false)
