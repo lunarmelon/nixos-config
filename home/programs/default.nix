@@ -13,6 +13,7 @@
     ./mpv
     ./npm
     ./oh-my-posh
+    ./tmux
     ./utils
     ./xdg
     ./zsh
