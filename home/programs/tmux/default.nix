@@ -17,6 +17,19 @@
 
       set -g cursor-style bar
       set -g renumber-windows on
+
+      unbind %
+      bind \\ split-window -h -c "#(pane_current_path)"
+
+      unbind \"
+      bind - split-window -v -c "#(pane_current_path)"
+
+
+      bind -r j resize-pane -D 5
+      bind -r k resize-pane -U 5
+      bind -r l resize-pane -R 5
+      bind -r h resize-pane -L 5
+      bind -r m resize-pane -Z
     '';
     focusEvents = true;
     historyLimit = 1000000;
