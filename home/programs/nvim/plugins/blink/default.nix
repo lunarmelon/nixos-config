@@ -1,8 +1,10 @@
 {
   plugins = {
     luasnip.enable = true;
+    blink-cmp-git.enable = true;
     blink-cmp = {
       enable = true;
+      setupLspCapabilities = true;
       settings = {
         keymap = {
           "<S-Tab>" = [
@@ -64,7 +66,16 @@
             "path"
             "snippets"
             "buffer"
+            "git"
           ];
+          providers = {
+            git = {
+              name = "Git";
+              module = "blink-cmp-git";
+              enabled = true;
+              score_offset = 100;
+            };
+          };
         };
         fuzzy = {
           implementation = "prefer_rust_with_warning";
