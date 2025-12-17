@@ -1,10 +1,14 @@
 {
   plugins.conform-nvim = {
     enable = true;
+    lazyLoad.settings = {
+      cmd = "ConformInfo";
+      event = "BufWrite";
+    };
     autoInstall.enable = true;
     settings = {
       format_on_save = {
-        timeout_ms = 1000;
+        timeout_ms = 500;
         lsp_fallback = true;
       };
       formatters_by_ft = {

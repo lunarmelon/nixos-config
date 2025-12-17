@@ -5,6 +5,9 @@
 }: {
   plugins.lint = {
     enable = true;
+    lazyLoad.settings = {
+      event = ["BufWritePost" "BufReadPost" "InsertLeave"];
+    };
     autoCmd = {
       callback = {
         __raw = ''
@@ -15,7 +18,6 @@
       };
       desc = "Lint on read, write, and insert leave";
       event = [
-        "BufReadPost"
         "BufWritePost"
         "InsertLeave"
       ];
