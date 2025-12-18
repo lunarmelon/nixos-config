@@ -16,6 +16,7 @@
     ./schemastore
     ./todo-comments
     ./treesitter
+    ./treesitter-textobjects
     ./typescript-tools
   ];
 }
