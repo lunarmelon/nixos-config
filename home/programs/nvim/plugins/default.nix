@@ -9,6 +9,7 @@
     ./lazygit
     ./lint
     ./lualine
+    ./lsp-lines
     ./lz-n
     ./markview
     ./mini
