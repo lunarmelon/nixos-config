@@ -9,7 +9,7 @@
     {
       event = "TextYankPost";
       pattern = "*";
-      command = "lua vim.highlight.on_yank{timeout=500}";
+      command = "lua vim.highlight.on_yank()";
     }
     # Enter git buffer in insert mode
     {
