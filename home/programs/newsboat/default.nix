@@ -1,0 +1,27 @@
+{
+  programs.newsboat = {
+    enable = true;
+    urls = [
+      {url = "https://drewdevault.com/blog/index.xml";}
+      {url = "https://vkc.sh/feed/";}
+      {url = "https://fedoramagazine.org/feed/";}
+      {url = "https://n0thanky0u.neocities.org/feed.xml";}
+      {url = "https://www.debian.org/News/news";}
+      {url = "https://thelinuxcast.org/feed/feed.xml";}
+    ];
+    extraConfig = ''
+      color background          white    color234
+      color listnormal          white    color234
+      color listfocus           color63  color236   bold
+      color listnormal_unread   white    color234   bold
+      color listfocus_unread    color63  color236   bold
+      color title               color62  color234   bold
+      color info                color62  color234   bold
+      color hint-key            yellow   black      bold
+      color hint-keys-delimiter white    black
+      color hint-separator      white    black      bold
+      color hint-description    white    black
+      color article             white    color234
+    '';
+  };
+}

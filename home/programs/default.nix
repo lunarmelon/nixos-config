@@ -11,6 +11,7 @@
     ./lazygit
     ./librewolf
     ./mpv
+    ./newsboat
     ./npm
     ./oh-my-posh
     ./tmux
