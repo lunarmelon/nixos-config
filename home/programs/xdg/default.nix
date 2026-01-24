@@ -1,5 +1,5 @@
 {pkgs, ...}: let
-  browser = ["librewolf.desktop" "brave-browser.desktop"];
+  browser = ["librewolf.desktop" "chromium.desktop"];
   editor = ["nvim.desktop"];
   terminal = ["kitty.desktop"];
   video = ["mpv.desktop"];

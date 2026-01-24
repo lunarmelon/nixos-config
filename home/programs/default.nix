@@ -1,7 +1,6 @@
 {pkgs, ...}: {
   imports = [
     ./alacritty
-    ./brave-browser
     ./bun
     ./fastfetch
     ./git
@@ -15,6 +14,7 @@
     ./npm
     ./oh-my-posh
     ./tmux
+    ./ungoogled-chromium
     ./utils
     ./xdg
     ./zsh
