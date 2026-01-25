@@ -16,6 +16,7 @@
     ./tmux
     ./ungoogled-chromium
     ./utils
+    ./vscode
     ./xdg
     ./zsh
   ];
