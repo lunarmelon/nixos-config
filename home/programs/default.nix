@@ -36,7 +36,9 @@
     pciutils # lspci
     usbutils # lsusb
 
+    # fonts
     inter
+    noto-fonts-cjk-sans
   ];
 
   home.shell.enableZshIntegration = true;
