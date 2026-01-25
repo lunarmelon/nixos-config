@@ -13,6 +13,7 @@
     ./newsboat
     ./npm
     ./oh-my-posh
+    ./onlyoffice
     ./tmux
     ./ungoogled-chromium
     ./utils
