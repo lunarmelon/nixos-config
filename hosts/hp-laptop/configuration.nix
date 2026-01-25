@@ -99,6 +99,7 @@
   environment.systemPackages = with pkgs; [
     gcc
     zsh
+    wget
   ];
 
   environment.pathsToLink = ["/share/xdg-desktop-portal" "/share/applications"];
