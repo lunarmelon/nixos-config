@@ -35,6 +35,8 @@
     # system tools
     pciutils # lspci
     usbutils # lsusb
+
+    inter
   ];
 
   home.shell.enableZshIntegration = true;
