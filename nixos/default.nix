@@ -6,5 +6,6 @@
     ./hardware
     ./nix-settings.nix
     ./programs
+    ./shell
   ];
 }
