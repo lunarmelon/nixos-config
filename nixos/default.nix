@@ -8,5 +8,6 @@
     ./printing.nix
     ./programs
     ./shell
+    ./users.nix
   ];
 }
