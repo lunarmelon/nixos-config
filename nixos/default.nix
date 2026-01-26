@@ -4,6 +4,7 @@
     ./boot/kernel.nix
     ./fonts
     ./hardware
+    ./locale.nix
     ./nix-settings.nix
     ./printing.nix
     ./programs
