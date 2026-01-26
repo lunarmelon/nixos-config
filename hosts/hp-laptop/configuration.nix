@@ -6,9 +6,6 @@
 
   networking.hostName = "lain-hp"; # Define your hostname.
 
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
