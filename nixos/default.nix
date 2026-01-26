@@ -5,6 +5,7 @@
     ./fonts
     ./hardware
     ./nix-settings.nix
+    ./printing.nix
     ./programs
     ./shell
   ];
