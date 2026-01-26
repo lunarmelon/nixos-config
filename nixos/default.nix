@@ -6,6 +6,7 @@
     ./hardware
     ./locale.nix
     ./nix-settings.nix
+    ./plasma
     ./power.nix
     ./printing.nix
     ./programs
