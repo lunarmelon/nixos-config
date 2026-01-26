@@ -4,12 +4,6 @@
     ./hardware-configuration.nix
   ];
 
-  # Enable flakes
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
-
   networking.hostName = "lain-hp"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -53,10 +47,6 @@
       kdePackages.kate
     ];
   };
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-  environment.sessionVariables.NIXPKGS_ALLOW_UNFREE = "1";
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
