@@ -15,8 +15,8 @@
       "flakes"
     ];
     cores = 0;
+    auto-optimise-store = true; # enable space optimisation by hardlinking
   };
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   environment.sessionVariables.NIXPKGS_ALLOW_UNFREE = "1";
