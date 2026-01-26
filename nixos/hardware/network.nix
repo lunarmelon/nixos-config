@@ -1,10 +1,10 @@
 {
   networking.networkmanager.enable = true;
 
-  networking.networkmanager.wifi.backend = "iwd"; # newer backend
+  # networking.networkmanager.wifi.backend = "iwd"; # newer backend
 
+  #services.resolved.enable = true; # enable systemd-resolved
   /*
-  services.resolved.enable = true; # enable systemd-resolved
   services.resolved.dnssec = "allow-downgrade"; # enable if available
   services.resolved.dnsovertls = "opportunistic"; # enable if available
 
