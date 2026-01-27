@@ -5,9 +5,14 @@
 
   config = {
     systemSettings = {
+      # Hardware
+      kernel.enable = true;
+      kernel.variant = "default";
       bluetooth.enable = true;
-      flatpak.enable = true;
       printing.enable = true;
+
+      # Software
+      flatpak.enable = true;
     };
     networking.hostName = "lain-hp";
   };
