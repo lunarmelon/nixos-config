@@ -1,8 +1,4 @@
-{
-  pkgs,
-  lib,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     ./alacritty
     ./bun
@@ -29,13 +25,21 @@
     # archives
     zip
     unzip
-
-    # misc
-    which
+    p7zip
     gnutar
-    btop # replacement of htop/nmon
+    gzip
+
+    # utils
+    which
+    btop
+    htop
+    ripgrep
+    fzf
+
+    # languages
     python3
     lua
+    gcc
 
     # system tools
     pciutils # lspci
