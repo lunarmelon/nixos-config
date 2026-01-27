@@ -20,4 +20,8 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
   environment.sessionVariables.NIXPKGS_ALLOW_UNFREE = "1";
+
+  environment.pathsToLink = ["/share/xdg-desktop-portal" "/share/applications"];
+
+  system.stateVersion = "25.05";
 }
