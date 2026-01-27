@@ -3,5 +3,10 @@
     ./hardware-configuration.nix
   ];
 
-  networking.hostName = "lain-hp";
+  config = {
+    systemSettings = {
+      bluetooth.enable = true;
+    };
+    networking.hostName = "lain-hp";
+  };
 }
