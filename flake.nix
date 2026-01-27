@@ -17,10 +17,13 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # Flatpak manager for NixOS
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
   outputs = inputs @ {
     nixpkgs,
+    nix-flatpak,
     home-manager,
     ...
   }: {
@@ -29,15 +32,18 @@
         modules = [
           ./hosts/hp-laptop/configuration.nix
           ./nixos
-
+          nix-flatpak.nixosModules.nix-flatpak
           # make home-manager as a module of nixos
           # so that home-manager configuration will be deployed automatically when executing `nixos-rebuild switch`
           home-manager.nixosModules.home-manager
           {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-
-            home-manager.users.melon = import ./home/home.nix;
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.melon.imports = [
+                ./home/home.nix
+              ];
+            };
 
             # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
             home-manager.extraSpecialArgs = {inherit inputs;};

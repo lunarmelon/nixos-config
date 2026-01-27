@@ -2,6 +2,7 @@
   imports = [
     ./boot/bootloader.nix
     ./boot/kernel.nix
+    ./flatpak.nix
     ./fonts
     ./hardware
     ./locale.nix
