@@ -9,10 +9,8 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    gcc
     zsh
     wget
-    powertop
   ];
 
   environment.pathsToLink = ["/share/xdg-desktop-portal" "/share/applications"];
