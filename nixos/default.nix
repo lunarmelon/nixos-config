@@ -2,16 +2,16 @@
   imports = [
     ./boot/bootloader.nix
     ./boot/kernel.nix
-    ./flatpak.nix
+    ./flatpak
     ./fonts
     ./hardware
-    ./locale.nix
-    ./nix-settings.nix
+    ./locale
+    ./nix-settings
     ./plasma
-    ./power.nix
-    ./printing.nix
+    ./power
+    ./printing
     ./programs
     ./shell
-    ./users.nix
+    ./users
   ];
 }
