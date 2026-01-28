@@ -28,6 +28,9 @@
         firewall.enable = true;
       };
     };
+
+    users.users.melon.description = "Melon";
+
     networking.hostName = "lain-hp";
   };
 }
