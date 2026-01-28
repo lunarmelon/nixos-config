@@ -14,6 +14,11 @@
       # Software
       flatpak.enable = true;
       plasma.enable = true;
+
+      # Security
+      security = {
+        automount.enable = true;
+      };
     };
     networking.hostName = "lain-hp";
   };
