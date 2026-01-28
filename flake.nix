@@ -24,6 +24,7 @@
   outputs = inputs @ {
     nixpkgs,
     nix-flatpak,
+    nixvim,
     home-manager,
     ...
   }: {
@@ -43,10 +44,8 @@
               users.melon.imports = [
                 ./home/home.nix
               ];
+              sharedModules = [nixvim.homeModules.nixvim];
             };
-
-            # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
-            home-manager.extraSpecialArgs = {inherit inputs;};
           }
         ];
       };
