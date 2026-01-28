@@ -11,6 +11,7 @@
     ./librewolf
     ./mpv
     ./newsboat
+    ./nvim
     ./npm
     ./oh-my-posh
     ./onlyoffice
@@ -47,10 +48,4 @@
   ];
 
   home.shell.enableZshIntegration = true;
-
-  programs.nixvim = {
-    enable = true;
-    defaultEditor = true;
-    imports = [./nvim];
-  };
 }
