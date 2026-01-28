@@ -32,7 +32,7 @@
     # Eza
     ls = "eza --group-directories-first --icons";
     ll = "ls -lh --git";
-    ll = "ls -lh";
+    #ll = "ls -lh";
     la = "ll -a";
     tree = "ll --tree --level=2";
     # Display images in terminal with Kitty;
