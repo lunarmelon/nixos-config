@@ -1,68 +1,88 @@
 {
   config,
   lib,
+  pkgs,
   ...
-}: {
-  programs.zsh = {
-    enable = true;
-    autocd = true;
-
-    initContent = lib.mkOrder 1200 ''stty stop undef '';
-
-    shellAliases = {
-      nv = "nvim";
-      #ls = "eza";
-      #ll = "ls -lh";
+}: let
+  cfg = config.userSettings.zsh;
+in {
+  options = {
+    userSettings.zsh = {
+      enable = lib.mkEnableOption "Enable zsh customization";
     };
+  };
+  config = lib.mkIf cfg.enable {
+    programs = {
+      direnv = {
+        enable = true;
+        enableZshIntegration = true;
+        nix-direnv = {
+          enable = true;
+          package = pkgs.nix-direnv;
+        };
+      };
+      zsh = {
+        enable = true;
+        autocd = true;
 
-    dotDir = "${config.xdg.configHome}/zsh";
+        initContent = lib.mkOrder 1200 ''stty stop undef '';
 
-    history = {
-      append = true;
-      findNoDups = true;
-      ignoreDups = true;
-      ignoreSpace = true;
-      path = "${config.xdg.dataHome}/zsh/zsh_history";
-      saveNoDups = true;
-      share = true;
-      size = 1000000;
-    };
+        shellAliases = {
+          nv = "nvim";
+          #ls = "eza";
+          #ll = "ls -lh";
+        };
 
-    historySubstringSearch = {
-      enable = true;
-      searchDownKey = ["^[[B" "$terminfo[kcud1]"];
-      searchUpKey = ["^[[A" "$terminfo[kcuu1]"];
-    };
+        dotDir = "${config.xdg.configHome}/zsh";
 
-    setOptions = [
-      "nobeep"
-      "inc_append_history"
-    ];
+        history = {
+          append = true;
+          findNoDups = true;
+          ignoreDups = true;
+          ignoreSpace = true;
+          path = "${config.xdg.dataHome}/zsh/zsh_history";
+          saveNoDups = true;
+          share = true;
+          size = 1000000;
+        };
 
-    zplug = {
-      enable = true;
-      zplugHome = "${config.xdg.dataHome}/zplug";
-      plugins = [
-        {name = "Aloxaf/fzf-tab";}
-        {name = "zdharma-continuum/fast-syntax-highlighting";}
-        {name = "zsh-users/zsh-completions";}
-        {name = "zsh-users/zsh-autosuggestions";}
-        {name = "zsh-users/zsh-history-substring-search";}
-        {name = "hlissner/zsh-autopair";}
-      ];
-    };
-    sessionVariables = {
-      WGETRC = "$XDG_CONFIG_HOME/wget/wgetrc";
-      GNUPGHOME = "$XDG_DATA_HOME/gnupg";
-      CARGO_HOME = "$XDG_DATA_HOME/cargo";
-      GOPATH = "$XDG_DATA_HOME/go";
-      GOBIN = "$GOPATH/bin";
-      GOMODCACHE = "$XDG_CACHE_HOME/go/mod";
-      _JAVA_AWT_WM_NONREPARENTING = 1;
-      FFMPEG_DATADIR = "$XDG_CONFIG_HOME/ffmpeg";
-      WINEPREFIX = "$XDG_DATA_HOME/wineprefixes/default";
-      BUN_INSTALL = "$XDG_DATA_HOME/bun";
-      NVM_DIR = "$XDG_CONFIG_HOME/nvm";
+        historySubstringSearch = {
+          enable = true;
+          searchDownKey = ["^[[B" "$terminfo[kcud1]"];
+          searchUpKey = ["^[[A" "$terminfo[kcuu1]"];
+        };
+
+        setOptions = [
+          "nobeep"
+          "inc_append_history"
+        ];
+
+        zplug = {
+          enable = true;
+          zplugHome = "${config.xdg.dataHome}/zplug";
+          plugins = [
+            {name = "Aloxaf/fzf-tab";}
+            {name = "zsh-users/zsh-completions";}
+            {name = "zsh-users/zsh-autosuggestions";}
+            {name = "zsh-users/zsh-history-substring-search";}
+            {name = "hlissner/zsh-autopair";}
+            {name = "zdharma-continuum/fast-syntax-highlighting";}
+          ];
+        };
+        sessionVariables = {
+          WGETRC = "$XDG_CONFIG_HOME/wget/wgetrc";
+          GNUPGHOME = "$XDG_DATA_HOME/gnupg";
+          CARGO_HOME = "$XDG_DATA_HOME/cargo";
+          GOPATH = "$XDG_DATA_HOME/go";
+          GOBIN = "$GOPATH/bin";
+          GOMODCACHE = "$XDG_CACHE_HOME/go/mod";
+          _JAVA_AWT_WM_NONREPARENTING = 1;
+          FFMPEG_DATADIR = "$XDG_CONFIG_HOME/ffmpeg";
+          WINEPREFIX = "$XDG_DATA_HOME/wineprefixes/default";
+          BUN_INSTALL = "$XDG_DATA_HOME/bun";
+          NVM_DIR = "$XDG_CONFIG_HOME/nvm";
+        };
+      };
     };
   };
 }

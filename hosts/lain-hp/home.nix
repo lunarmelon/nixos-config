@@ -1,6 +1,9 @@
 {
   config = {
     userSettings = {
+      # Shell
+      zsh.enable = true;
+
       # Programs
       chromium.enable = true;
       fastfetch.enable = true;
