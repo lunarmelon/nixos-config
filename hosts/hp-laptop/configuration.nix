@@ -18,6 +18,7 @@
       # Security
       security = {
         automount.enable = true;
+        firewall.enable = true;
       };
     };
     networking.hostName = "lain-hp";

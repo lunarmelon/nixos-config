@@ -10,7 +10,6 @@ in {
       enable = lib.mkEnableOption "Enable automount";
     };
   };
-
   config = lib.mkIf cfg.enable {
     services = {
       devmon.enable = true;
