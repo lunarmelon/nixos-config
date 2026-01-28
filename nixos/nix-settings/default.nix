@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   nix.settings = {
     # Features for building
     system-features = [
@@ -34,6 +34,25 @@
   environment = {
     sessionVariables.NIXPKGS_ALLOW_UNFREE = "1";
     pathsToLink = ["/share/xdg-desktop-portal" "/share/applications"];
+  };
+
+  programs.nix-ld = {
+    enable = true;
+    #Include libstdc++ in the nix-ld profile
+    libraries = [
+      pkgs.stdenv.cc.cc
+      pkgs.zlib
+      pkgs.fuse3
+      pkgs.icu
+      pkgs.nss
+      pkgs.openssl
+      pkgs.curl
+      pkgs.expat
+      pkgs.xorg.libX11
+      pkgs.vulkan-headers
+      pkgs.vulkan-loader
+      pkgs.vulkan-tools
+    ];
   };
 
   system.stateVersion = "25.05";
