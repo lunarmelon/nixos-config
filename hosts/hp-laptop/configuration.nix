@@ -5,6 +5,10 @@
 
   config = {
     systemSettings = {
+      # Users
+      users = ["melon"];
+      adminUsers = ["melon"];
+
       # Hardware
       kernel.enable = true;
       kernel.variant = "default";
