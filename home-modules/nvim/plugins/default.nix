@@ -1,0 +1,23 @@
+{
+  imports = [
+    ./blink
+    ./colorizer
+    ./colorscheme
+    ./conform
+    ./gitsigns
+    ./indent-blankline
+    ./lazygit
+    ./lint
+    ./lualine
+    ./lsp-lines
+    ./lz-n
+    ./markview
+    ./mini
+    ./noice
+    ./schemastore
+    ./todo-comments
+    ./treesitter
+    ./treesitter-textobjects
+    ./typescript-tools
+  ];
+}

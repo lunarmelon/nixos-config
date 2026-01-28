@@ -5,8 +5,9 @@ with lib; let
     mapAttrs
     (
       file: type:
-        if type == "directory"
-        then getDir "${dir}/${file}"
+        if type == "directory" then
+		if file == "nvim" then {} # Skip neovim directory
+        	else getDir "${dir}/${file}"
         else type
     )
     (builtins.readDir dir);
@@ -26,5 +27,5 @@ with lib; let
         && ! lib.hasSuffix "-hm.nix" file)
       (files dir));
 in {
-  imports = importAll ./.;
+  imports = (importAll ./.) ++	[./nvim];
 }
