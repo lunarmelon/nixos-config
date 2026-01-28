@@ -3,6 +3,7 @@
     userSettings = {
       # Programs
       chromium.enable = true;
+      fastfetch.enable = true;
       git.enable = true;
       gpg.enable = true;
       lazygit.enable = true;
