@@ -13,9 +13,9 @@ in {
   config = lib.mkIf cfg.enable {
     services.flatpak = {
       enable = true;
-      packages = [
-        "org.prismlauncher.PrismLauncher"
-      ];
+      uninstallUnmanaged = true;
+      update.onActivation = true;
+      packages = [];
     };
   };
 }
