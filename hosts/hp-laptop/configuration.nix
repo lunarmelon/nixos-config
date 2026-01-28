@@ -14,6 +14,7 @@
       # Software
       flatpak.enable = true;
       plasma.enable = true;
+      prism-launcher.enable = true;
 
       # Security
       security = {
