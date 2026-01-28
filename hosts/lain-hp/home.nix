@@ -6,6 +6,7 @@
       fastfetch.enable = true;
       git.enable = true;
       gpg.enable = true;
+      keepassxc.enable = true;
       lazygit.enable = true;
       librewolf.enable = true;
       oh-my-posh.enable = true;
