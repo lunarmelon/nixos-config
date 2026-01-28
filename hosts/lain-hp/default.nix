@@ -9,7 +9,7 @@
       builtins.listToAttrs
       (map (user: {
           name = user;
-          value = {imports = [../../home/programs];};
+          value = {imports = [../../home-modules/programs];};
         })
         config.systemSettings.users);
   };
