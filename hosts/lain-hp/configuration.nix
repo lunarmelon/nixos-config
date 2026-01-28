@@ -1,8 +1,4 @@
 {
-  imports = [
-    ./hardware-configuration.nix
-  ];
-
   config = {
     systemSettings = {
       # Users
@@ -30,7 +26,5 @@
     };
 
     users.users.melon.description = "Melon";
-
-    networking.hostName = "lain-hp";
   };
 }

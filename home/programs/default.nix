@@ -5,6 +5,7 @@
     ./fastfetch
     ./git
     ./gpg
+    ./home-manager
     ./keepassxc
     ./kitty
     ./lazygit
