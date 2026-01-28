@@ -9,6 +9,7 @@
       keepassxc.enable = true;
       lazygit.enable = true;
       librewolf.enable = true;
+      nvim.enable = true;
       oh-my-posh.enable = true;
 
       # Programming
