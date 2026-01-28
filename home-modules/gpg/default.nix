@@ -1,14 +1,24 @@
 {
   config,
+  lib,
   pkgs,
   ...
-}: {
-  services.gpg-agent = {
-    enable = true;
-    pinentry.package = pkgs.pinentry-qt;
+}: let
+  cfg = config.userSettings.gpg;
+in {
+  options = {
+    userSettings.gpg = {
+      enable = lib.mkEnableOption "Enable GPG";
+    };
   };
-  programs.gpg = {
-    enable = true;
-    homedir = "${config.xdg.dataHome}/gnupg";
+  config = lib.mkIf cfg.enable {
+    services.gpg-agent = {
+      enable = true;
+      pinentry.package = pkgs.pinentry-qt;
+    };
+    programs.gpg = {
+      enable = true;
+      homedir = "${config.xdg.dataHome}/gnupg";
+    };
   };
 }

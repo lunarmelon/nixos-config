@@ -1,11 +1,7 @@
 {
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
   config = {
     userSettings = {
+      gpg.enable = true;
     };
   };
 }
