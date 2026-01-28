@@ -77,7 +77,7 @@
             (./hosts + "/${host}")
 
             # my modules
-            ./nixos
+            ./nixos-modules
 
             # home manager
             inputs.home-manager.nixosModules.home-manager
