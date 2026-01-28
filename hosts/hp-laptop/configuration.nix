@@ -13,6 +13,7 @@
 
       # Software
       flatpak.enable = true;
+      plasma.enable = true;
     };
     networking.hostName = "lain-hp";
   };
