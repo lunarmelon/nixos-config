@@ -13,6 +13,7 @@
 
       # Software
       flatpak.enable = true;
+      heroic.enable = true;
       plasma.enable = true;
       prism-launcher.enable = true;
       steam.enable = true;
