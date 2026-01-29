@@ -10,18 +10,24 @@
       {url = "https://thelinuxcast.org/feed/feed.xml";}
     ];
     extraConfig = ''
-      color background          white    color234
-      color listnormal          white    color234
-      color listfocus           color63  color236   bold
-      color listnormal_unread   white    color234   bold
-      color listfocus_unread    color63  color236   bold
-      color title               color62  color234   bold
-      color info                color62  color234   bold
-      color hint-key            yellow   black      bold
-      color hint-keys-delimiter white    black
-      color hint-separator      white    black      bold
-      color hint-description    white    black
-      color article             white    color234
+      color listnormal         color15 default
+      color listnormal_unread  color2  default
+      color listfocus_unread   color2  color0
+      color listfocus          default color0
+      color background         default default
+      color article            default default
+      color end-of-text-marker color8  default
+      color info               color4  color8
+      color hint-separator     default color8
+      color hint-description   default color8
+      color title              color14 color8
+
+      highlight article "^(Feed|Title|Author|Link|Date): .+" color4 default bold
+      highlight article "^(Feed|Title|Author|Link|Date):" color14 default bold
+
+      highlight article "\\((link|image|video)\\)" color8 default
+      highlight article "https?://[^ ]+" color4 default
+      highlight article "\[[0-9]+\]" color6 default bold
     '';
   };
 }
