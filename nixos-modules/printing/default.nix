@@ -16,6 +16,6 @@ in {
       enable = true;
       openFirewall = true; # Open ports for printing
     };
-    environment.systemPackages = [pkgs.cups-filters];
+    environment.systemPackages = [pkgs.cups-filters pkgs.hplip];
   };
 }
