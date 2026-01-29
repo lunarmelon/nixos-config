@@ -4,6 +4,7 @@
     packages = with pkgs; [
       corefonts
       inter
+      fira
       noto-fonts
       noto-fonts-cjk-sans
       vista-fonts
