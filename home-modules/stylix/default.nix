@@ -29,6 +29,34 @@ in {
       autoEnable = false;
       polarity = theme.polarity;
       base16Scheme = theme;
+      fonts = {
+        # TODO abstract fonts into an option
+        monospace = {
+          name = "JetBrainsMono Nerd Font";
+          package = pkgs.nerd-fonts.jetbrains-mono;
+        };
+        serif = {
+          name = "Fira Sans";
+          package = pkgs.fira-sans;
+        };
+        sansSerif = {
+          name = "Fira Sans";
+          package = pkgs.fira-sans;
+        };
+        emoji = {
+          name = "Twitter Color Emoji";
+          package = pkgs.twitter-color-emoji;
+        };
+        sizes = {
+          terminal = 14;
+          applications = 11;
+          popups = 11;
+          desktop = 11;
+        };
+      };
+      targets = {
+        kitty.enable = true;
+      };
     };
   };
 }

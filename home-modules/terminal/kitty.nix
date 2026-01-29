@@ -15,13 +15,13 @@ in {
     programs.kitty = {
       enable = true;
       enableGitIntegration = true;
-      font = {
-        package = pkgs.nerd-fonts.jetbrains-mono;
-        name = "JetbrainsMono Nerd Font";
-        size = 14;
-      };
+      # font = {
+      #   package = pkgs.nerd-fonts.jetbrains-mono;
+      #   name = "JetbrainsMono Nerd Font";
+      #   size = 14;
+      # };
       # Color theme
-      themeFile = "Catppuccin-Mocha";
+      #themeFile = "Catppuccin-Mocha";
       settings = {
         # Mouse
         mouse_hide_wait = 10.0;
