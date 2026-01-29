@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }: let
   cfg = config.systemSettings.plasma;
@@ -19,5 +20,13 @@ in {
       };
       desktopManager.plasma6.enable = true;
     };
+    environment.systemPackages = with pkgs; [
+      kdePackages.kate
+      kdePackages.dolphin
+      kdePackages.skanpage
+      kdePackages.okular
+      kdePackages.gwenview
+    ];
+    services.avahi.nssmdns4 = true;
   };
 }
