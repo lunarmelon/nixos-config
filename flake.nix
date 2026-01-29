@@ -16,6 +16,11 @@
     };
     # Flatpak manager for NixOS
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+    # Theming framework for NixOS
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ {self, ...}: let
@@ -94,6 +99,7 @@
               };
             }
             inputs.nix-flatpak.nixosModules.nix-flatpak
+            inputs.stylix.nixosModules.stylix
           ];
           specialArgs = {
             inherit pkgs-stable;
