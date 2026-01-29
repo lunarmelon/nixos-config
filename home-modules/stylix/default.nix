@@ -1,6 +1,5 @@
 {
   config,
-  inputs,
   lib,
   osConfig,
   pkgs,
@@ -56,8 +55,16 @@ in {
       };
       targets = {
         alacritty.enable = true;
+        gtk.enable = true;
+        kde.enable = true;
         kitty.enable = true;
+        qt.enable = true;
       };
+    };
+    fonts.fontconfig.defaultFonts = {
+      monospace = [config.stylix.fonts.monospace.name];
+      sansSerif = [config.stylix.fonts.sansSerif.name];
+      serif = [config.stylix.fonts.serif.name];
     };
   };
 }
