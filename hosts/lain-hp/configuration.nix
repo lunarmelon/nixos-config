@@ -16,6 +16,7 @@
       plasma.enable = true;
       prism-launcher.enable = true;
       steam.enable = true;
+      strawberry.enable = true;
 
       # Security
       security = {
