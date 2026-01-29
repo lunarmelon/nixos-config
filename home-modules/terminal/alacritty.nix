@@ -13,7 +13,7 @@ in {
   config = lib.mkIf cfg.enable {
     programs.alacritty = {
       enable = true;
-      cursor = {
+      settings.cursor = {
         style.shape = "Beam";
       };
     };
