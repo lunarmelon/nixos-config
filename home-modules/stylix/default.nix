@@ -55,6 +55,7 @@ in {
         };
       };
       targets = {
+        alacritty.enable = true;
         kitty.enable = true;
       };
     };
