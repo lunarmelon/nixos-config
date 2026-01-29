@@ -99,7 +99,6 @@
               };
             }
             inputs.nix-flatpak.nixosModules.nix-flatpak
-            inputs.stylix.nixosModules.stylix
           ];
           specialArgs = {
             inherit pkgs-stable;
