@@ -21,6 +21,9 @@
         bun.enable = true;
         npm.enable = true;
       };
+
+      # Style
+      stylix.enable = true;
     };
   };
 }

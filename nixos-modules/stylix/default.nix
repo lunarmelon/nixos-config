@@ -21,7 +21,7 @@ in {
   config = lib.mkIf cfg.enable {
     stylix = {
       enable = true;
-      autoEnable = true;
+      autoEnable = false;
       polarity = theme.polarity;
       base16Scheme = theme;
     };
