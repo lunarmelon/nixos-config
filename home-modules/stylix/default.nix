@@ -58,6 +58,9 @@ in {
         gtk.enable = true;
         kde.enable = true;
         kitty.enable = true;
+        lazygit.enable = true;
+        mpv.enable = true;
+        #nixvim.enable = true;
         qt.enable = true;
       };
     };
