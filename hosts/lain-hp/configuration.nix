@@ -24,6 +24,12 @@
         #firejail.enable = true;
         firewall.enable = true;
       };
+
+      # Style
+      stylix = {
+        enable = true;
+        theme = "catppuccin-mocha";
+      };
     };
 
     users.users.melon.description = "Melon";
