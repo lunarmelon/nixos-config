@@ -27,6 +27,7 @@
     cores = 0;
     auto-optimise-store = true; # enable space optimisation by hardlinking
     trusted-users = ["@wheel"]; # wheel group gets trusted access to nix daemon
+    download-buffer-size = 500000000;
   };
 
   # Allow unfree packages
