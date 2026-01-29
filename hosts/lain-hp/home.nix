@@ -4,6 +4,9 @@
       # Shell
       zsh.enable = true;
 
+      # Terminal
+      kitty.enable = true;
+
       # Programs
       chromium.enable = true;
       fastfetch.enable = true;
