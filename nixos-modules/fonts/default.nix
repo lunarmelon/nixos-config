@@ -3,13 +3,12 @@
     enableDefaultPackages = true;
     packages = with pkgs; [
       corefonts
-      inter
       fira
+      inter
       noto-fonts
       noto-fonts-cjk-sans
       vista-fonts
     ];
-
     fontDir.enable = true;
     fontconfig = {
       subpixel.rgba = "rgb"; # Subpixel rendering
