@@ -20,7 +20,6 @@
 
       # Security
       security = {
-        automount.enable = true;
         #firejail.enable = true;
         firewall.enable = true;
       };
