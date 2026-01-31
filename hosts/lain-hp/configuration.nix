@@ -25,6 +25,11 @@
         firewall.enable = true;
       };
 
+      # Services
+      services = {
+        ananicy-cpp.enable = true;
+      };
+
       # Programming
       programming.enable = true;
 
