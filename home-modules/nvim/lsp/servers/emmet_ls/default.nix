@@ -4,7 +4,7 @@
     settings = {
       filetypes = [
         "html"
-        "cssls"
+        "css"
         "javascriptreact"
         "typescriptreact"
         "astro"
