@@ -23,6 +23,7 @@ in {
       python3
       python313Packages.pip
       rustc
+      virtualenv
     ];
   };
 }
