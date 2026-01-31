@@ -9,24 +9,6 @@
         nil
         nixd
         nixdoc
-
-        # archives
-        zip
-        unzip
-        p7zip
-        gnutar
-        gzip
-
-        # utils
-        which
-        btop
-        htop
-        ripgrep
-        fzf
-
-        # system tools
-        pciutils # lspci
-        usbutils # lsusb
       ];
     };
   };
