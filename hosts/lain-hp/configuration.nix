@@ -25,6 +25,9 @@
         firewall.enable = true;
       };
 
+      # Programming
+      programming.enable = true;
+
       # Style
       stylix = {
         enable = true;

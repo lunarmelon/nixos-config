@@ -24,11 +24,6 @@
         ripgrep
         fzf
 
-        # languages
-        python3
-        lua
-        gcc
-
         # system tools
         pciutils # lspci
         usbutils # lsusb
