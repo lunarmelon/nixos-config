@@ -28,6 +28,9 @@
       # Programming
       programming.enable = true;
 
+      # WM
+      awesome.enable = true;
+
       # Style
       stylix = {
         enable = true;
