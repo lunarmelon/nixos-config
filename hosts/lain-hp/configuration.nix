@@ -28,6 +28,7 @@
       # Services
       services = {
         ananicy-cpp.enable = true;
+        apparmor.enable = true;
       };
 
       # Programming
