@@ -1,7 +1,6 @@
 {
   config,
   lib,
-  pkgs,
   ...
 }: let
   cfg = config.userSettings.zsh;
@@ -13,28 +12,21 @@ in {
   };
   config = lib.mkIf cfg.enable {
     programs = {
-      direnv = {
-        enable = true;
-        enableZshIntegration = true;
-        nix-direnv = {
-          enable = true;
-          package = pkgs.nix-direnv;
-        };
-      };
       zsh = {
         enable = true;
         autocd = true;
+        enableCompletion = lib.mkForce false; # disable for zsh autocomplete plugin
+        autosuggestion.enable = true;
 
         initContent = lib.mkOrder 1200 ''stty stop undef '';
 
-        shellAliases = {
-          nv = "nvim";
-          #ls = "eza";
-          #ll = "ls -lh";
-        };
-
         dotDir = "${config.xdg.configHome}/zsh";
 
+        autosuggestion.strategy = [
+          "history"
+          "completion"
+          "match_prev_cmd"
+        ];
         history = {
           append = true;
           findNoDups = true;
@@ -57,16 +49,14 @@ in {
           "inc_append_history"
         ];
 
-        zplug = {
+        antidote = {
           enable = true;
-          zplugHome = "${config.xdg.dataHome}/zplug";
           plugins = [
-            {name = "Aloxaf/fzf-tab";}
-            {name = "zsh-users/zsh-completions";}
-            {name = "zsh-users/zsh-autosuggestions";}
-            {name = "zsh-users/zsh-history-substring-search";}
-            {name = "hlissner/zsh-autopair";}
-            {name = "zdharma-continuum/fast-syntax-highlighting";}
+            "Aloxaf/fzf-tab"
+            "zdharma-continuum/fast-syntax-highlighting"
+            "marlonrichert/zsh-autocomplete"
+            #"zsh-users/zsh-history-substring-search" # not compatible with zsh-autocomplete
+            "hlissner/zsh-autopair"
           ];
         };
         sessionVariables = {
