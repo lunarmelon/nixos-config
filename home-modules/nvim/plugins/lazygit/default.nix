@@ -9,7 +9,6 @@
         "LazyGitFilter"
         "LazyGitFilterCurrentFile"
       ];
-      keys = "<leader>lg";
     };
   };
 }
