@@ -3,10 +3,10 @@
   lib,
   ...
 }: let
-  cfg = config.systemSettings.security.firewall;
+  cfg = config.systemSettings.services.firewall;
 in {
   options = {
-    systemSettings.security.firewall = {
+    systemSettings.services.firewall = {
       enable = lib.mkEnableOption "Activate firewall with ports open only for Syncthing";
     };
   };

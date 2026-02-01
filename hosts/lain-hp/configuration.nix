@@ -18,16 +18,12 @@
       steam.enable = true;
       strawberry.enable = true;
 
-      # Security
-      security = {
-        #firejail.enable = true;
-        firewall.enable = true;
-      };
-
       # Services
       services = {
         ananicy-cpp.enable = true;
         apparmor.enable = true;
+        firewall.enable = true;
+        #firejail.enable = true;
       };
 
       # Programming

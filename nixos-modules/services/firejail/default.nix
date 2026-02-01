@@ -4,10 +4,10 @@
   pkgs,
   ...
 }: let
-  cfg = config.systemSettings.security.firejail;
+  cfg = config.systemSettings.services.firejail;
 in {
   options = {
-    systemSettings.security.firejail = {
+    systemSettings.services.firejail = {
       enable = lib.mkEnableOption "Use firejail on some apps for extra security";
     };
   };
