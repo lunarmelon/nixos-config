@@ -1,4 +1,13 @@
 {pkgs, ...}: {
+  fileSystems = {
+    "/".options = [
+      "defaults"
+      "noatime"
+      # "version_upgrade=incompatible" # set this to forcefully upgrade the version
+    ]; # disable access time updates
+  };
+  services.bcachefs.autoScrub.enable = true;
+  boot.kernel.sysfs.fs.bcachefs.dm-0.dev-0.label = "NixOS-Root";
   # Enable ZRAM
   zramSwap = {
     enable = true;
