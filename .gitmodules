@@ -1,3 +1,0 @@
-[submodule "nixos-modules/wm/dwm/dwm"]
-	path = nixos-modules/wm/dwm/dwm
-	url = https://github.com/lunarmelon/dwm.git

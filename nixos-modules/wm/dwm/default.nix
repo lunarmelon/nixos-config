@@ -1,7 +1,6 @@
 {
   config,
   lib,
-  pkgs,
   ...
 }: let
   cfg = config.systemSettings.dwm;
@@ -17,9 +16,6 @@ in {
         enable = true;
         windowManager.dwm = {
           enable = true;
-          package = pkgs.dwm.overrideAttrs {
-            src = ./dwm;
-          };
         };
       };
       displayManager = {

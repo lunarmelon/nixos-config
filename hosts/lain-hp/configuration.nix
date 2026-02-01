@@ -31,7 +31,6 @@
 
       # WM
       awesome.enable = true;
-      dwm.enable = true;
 
       # Style
       stylix = {
