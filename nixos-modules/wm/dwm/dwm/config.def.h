@@ -71,7 +71,6 @@ static const Layout layouts[] = {
     {"><>", NULL}, /* no layout function means floating behavior */
     {NULL, NULL},
 };
-
 /* key definitions */
 #define MODKEY Mod1Mask
 #define TAGKEYS(KEY, TAG)                                                      \
@@ -145,10 +144,8 @@ static const Key keys[] = {
     {MODKEY | Mod4Mask | ShiftMask, XK_9, incrovgaps, {.i = -1}},
     {MODKEY | Mod4Mask, XK_0, togglegaps, {0}},
     {MODKEY | Mod4Mask | ShiftMask, XK_0, defaultgaps, {0}},
-    {MODKEY, XK_Tab, view, {0}},
-    {MODKEY | ShiftMask, XK_c, killclient, {0}},
-    {MODKEY, XK_t, setlayout, {.v = &layouts[0]}},
-
+    {MODKEY | ControlMask, XK_c, killclient, {.ui = 1}}, // kill unselect
+    {MODKEY | ShiftMask | ControlMask, XK_c, killclient, {.ui = 2}}, // killall
 };
 
 /* button definitions */
