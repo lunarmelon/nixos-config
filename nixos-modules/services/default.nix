@@ -12,4 +12,7 @@
     };
     udev.enable = true;
   };
+  security = {
+    sudo-rs.enable = true;
+  };
 }
