@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }: let
   cfg = config.userSettings.zsh;
@@ -12,13 +13,24 @@ in {
   };
   config = lib.mkIf cfg.enable {
     programs = {
+      direnv = {
+        enable = true;
+        enableZshIntegration = true;
+        nix-direnv = {
+          enable = true;
+          package = pkgs.nix-direnv;
+        };
+      };
       zsh = {
         enable = true;
         autocd = true;
         enableCompletion = lib.mkForce false; # disable for zsh autocomplete plugin
         autosuggestion.enable = true;
 
-        initContent = lib.mkOrder 1200 ''stty stop undef '';
+        initContent = lib.mkOrder 1200 ''
+          stty stop undef
+          eval "$(direnv hook zsh)"
+        '';
 
         dotDir = "${config.xdg.configHome}/zsh";
 

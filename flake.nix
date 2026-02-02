@@ -70,6 +70,19 @@
       )
     );
   in {
+    devShells.${system}.suckless = pkgs.mkShell {
+      packages = with pkgs; [
+        pkg-config
+        xorg.libX11
+        xorg.libXft
+        xorg.libXinerama
+        fontconfig
+        freetype
+        harfbuzz
+        gcc
+        gnumake
+      ];
+    };
     # generate a nixos configuration for every host in ./hosts
     nixosConfigurations = builtins.listToAttrs (
       map (host: {
