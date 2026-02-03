@@ -13,6 +13,20 @@ in {
   };
   config = lib.mkIf cfg.enable {
     services = {
+      dwm-status = {
+        enable = true;
+        settings = {
+          order = [
+            "battery"
+            "time"
+          ];
+          separator = " | ";
+          time = {
+            format = "%a %d-%b %H:%M ";
+            update_seconds = true;
+          };
+        };
+      };
       xserver = {
         enable = true;
         windowManager.dwm = {
