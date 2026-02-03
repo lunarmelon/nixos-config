@@ -24,6 +24,25 @@ static const char *colors[][3] = {
     /*               fg         bg         border   */
     [SchemeNorm] = {col_gray3, col_gray1, col_gray2},
     [SchemeSel] = {col_gray4, col_cyan, col_cyan},
+    [SchemeStatus] = {col_gray3, col_gray1,
+                      "#000000"}, // Statusbar right {text,background,not used
+                                  // but cannot be empty}
+    [SchemeTagsSel] = {col_gray4, col_cyan,
+                       "#000000"}, // Tagbar left selected {text,background,not
+                                   // used but cannot be empty}
+    [SchemeTagsNorm] =
+        {col_gray3, col_gray1,
+         "#000000"}, // Tagbar left unselected {text,background,not used but
+                     // cannot be empty}
+    [SchemeInfoSel] =
+        {col_gray4, col_cyan,
+         "#000000"}, // infobar middle  selected {text,background,not used but
+                     // cannot be empty}
+    [SchemeInfoNorm] =
+        {col_gray3, col_gray1,
+         "#000000"}, // infobar middle  unselected {text,background,not used but
+                     // cannot be empty}
+
 };
 
 /* tagging */
@@ -93,6 +112,8 @@ static const char *dmenucmd[] = {
     "-nf",       col_gray3, "-sb",    col_cyan, "-sf",     col_gray4, NULL};
 static const char *termcmd[] = {"kitty", NULL};
 
+#define BROWSER "librewolf"
+
 static const Key keys[] = {
     /* modifier                     key        function        argument */
     {MODKEY, XK_p, spawn, {.v = dmenucmd}},
@@ -146,6 +167,8 @@ static const Key keys[] = {
     {MODKEY | Mod4Mask | ShiftMask, XK_0, defaultgaps, {0}},
     {MODKEY | ControlMask, XK_c, killclient, {.ui = 1}}, // kill unselect
     {MODKEY | ShiftMask | ControlMask, XK_c, killclient, {.ui = 2}}, // killall
+    // application bindings
+    {MODKEY, XK_w, spawn, {.v = (const char *[]){BROWSER, NULL}}},
 };
 
 /* button definitions */
