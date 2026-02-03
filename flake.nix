@@ -21,6 +21,11 @@
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # Mango wayland compositor
+    mango = {
+      url = "github:DreamMaoMao/mango";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ {self, ...}: let
@@ -94,8 +99,11 @@
             {config.networking.hostName = host;}
             (./hosts + "/${host}")
 
-            # my modules
+            # system modules
             ./nixos-modules
+
+            # mango
+            inputs.mango.nixosModules.mango
 
             # home manager
             inputs.home-manager.nixosModules.home-manager
@@ -103,7 +111,10 @@
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
-                sharedModules = [inputs.nixvim.homeModules.nixvim];
+                sharedModules = [
+                  inputs.nixvim.homeModules.nixvim
+                  inputs.mango.hmModules.mango
+                ];
                 extraSpecialArgs = {
                   inherit pkgs;
                   inherit pkgs-stable;

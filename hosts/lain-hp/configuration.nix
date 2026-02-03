@@ -32,6 +32,7 @@
       # WM
       awesome.enable = true;
       dwm.enable = true;
+      mango.enable = true;
 
       # Style
       stylix = {
