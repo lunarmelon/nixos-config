@@ -169,6 +169,7 @@ static const Key keys[] = {
     {MODKEY | ShiftMask | ControlMask, XK_c, killclient, {.ui = 2}}, // killall
     // application bindings
     {MODKEY, XK_w, spawn, {.v = (const char *[]){BROWSER, NULL}}},
+    {MODKEY | ControlMask | ShiftMask, XK_q, quit, {1}},
 };
 
 /* button definitions */
