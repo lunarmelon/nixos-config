@@ -13,6 +13,21 @@
     udev.enable = true;
   };
   security = {
-    sudo-rs.enable = true;
+    sudo-rs = {
+      enable = true;
+      extraRules = [
+        {
+          groups = ["wheel"];
+          host = "ALL";
+          runAs = "ALL:ALL";
+          commands = [
+            {
+              command = "/run/current-system/sw/bin/xbacklight";
+              options = ["NOPASSWD"];
+            }
+          ];
+        }
+      ];
+    };
   };
 }

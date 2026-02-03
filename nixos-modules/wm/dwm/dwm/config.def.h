@@ -1,3 +1,4 @@
+#include <X11/XF86keysym.h> /* for brightness keys */
 /* appearance */
 static const unsigned int gappih = 20; /* horiz inner gap between windows */
 static const unsigned int gappiv = 10; /* vert inner gap between windows */
@@ -18,6 +19,10 @@ static const int showfloating = 0;      /* 0 means no floating indicator */
 static const int topbar = 1;            /* 0 means bottom bar */
 static const char *fonts[] = {"JetBrainsMono Nerd Font:size=11"};
 static const char dmenufont[] = "JetBrainsMono Nerd Font:size=10";
+
+/* backlight */
+static const char *brupcmd[] = {"sudo", "xbacklight", "-inc", "5", NULL};
+static const char *brdowncmd[] = {"sudo", "xbacklight", "-dec", "5", NULL};
 
 /* Catppuccin Mocha colors */
 static const char col_rosewater[] = "#f5e0dc";
@@ -211,6 +216,10 @@ static const Key keys[] = {
     {MODKEY | ControlMask, XK_t, togglebartags, {0}},
     {MODKEY | ControlMask, XK_r, togglebarlt, {0}},
     {MODKEY | ControlMask, XK_f, togglebarfloat, {0}},
+
+    /* backlight control */
+    {0, XF86XK_MonBrightnessUp, spawn, {.v = brupcmd}},
+    {0, XF86XK_MonBrightnessDown, spawn, {.v = brdowncmd}},
 };
 
 /* button definitions */
