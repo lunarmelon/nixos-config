@@ -30,7 +30,7 @@
       programming.enable = true;
 
       # WM
-      awesome.enable = true;
+      #awesome.enable = true;
       dwm.enable = true;
       mango.enable = true;
 
