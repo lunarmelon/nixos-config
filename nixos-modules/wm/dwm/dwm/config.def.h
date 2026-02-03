@@ -1,5 +1,3 @@
-/* See LICENSE file for copyright and license details. */
-
 /* appearance */
 static const unsigned int gappih = 20; /* horiz inner gap between windows */
 static const unsigned int gappiv = 10; /* vert inner gap between windows */
@@ -12,6 +10,11 @@ static int smartgaps =
 static const unsigned int borderpx = 1; /* border pixel of windows */
 static const unsigned int snap = 32;    /* snap pixel */
 static const int showbar = 1;           /* 0 means no bar */
+static const int showtitle = 1;         /* 0 means no title */
+static const int showtags = 1;          /* 0 means no tags */
+static const int showlayout = 1;        /* 0 means no layout indicator */
+static const int showstatus = 1;        /* 0 means no status bar */
+static const int showfloating = 0;      /* 0 means no floating indicator */
 static const int topbar = 1;            /* 0 means bottom bar */
 static const char *fonts[] = {"JetBrainsMono Nerd Font:size=11"};
 static const char dmenufont[] = "JetBrainsMono Nerd Font:size=10";
@@ -132,9 +135,9 @@ static const Layout layouts[] = {
 static char dmenumon[2] =
     "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = {"dmenu_run", "-m",  dmenumon,      "-fn",
-                                 dmenufont,   "-nb", col_gray1,     "-nf",
-                                 col_gray3,   "-sb", custom_color1, "-sf",
-                                 col_gray4,   NULL};
+                                 dmenufont,   "-nb", col_crust,     "-nf",
+                                 col_base,    "-sb", custom_color1, "-sf",
+                                 col_text,    NULL};
 static const char *termcmd[] = {"kitty", NULL};
 
 #define BROWSER "librewolf"
@@ -201,6 +204,13 @@ static const Key keys[] = {
     {MODKEY | ShiftMask, XK_bracketright, tagmon, {.i = -1}},
     {MODKEY, XK_bracketleft, focusmon, {.i = +1}},
     {MODKEY | ShiftMask, XK_bracketleft, tagmon, {.i = +1}},
+
+    /* toggle statusbar pieces individually */
+    {MODKEY | ControlMask, XK_t, togglebartitle, {0}},
+    {MODKEY | ControlMask, XK_s, togglebarstatus, {0}},
+    {MODKEY | ControlMask, XK_t, togglebartags, {0}},
+    {MODKEY | ControlMask, XK_r, togglebarlt, {0}},
+    {MODKEY | ControlMask, XK_f, togglebarfloat, {0}},
 };
 
 /* button definitions */
