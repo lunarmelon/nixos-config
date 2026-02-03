@@ -167,9 +167,15 @@ static const Key keys[] = {
     {MODKEY | Mod4Mask | ShiftMask, XK_0, defaultgaps, {0}},
     {MODKEY | ControlMask, XK_c, killclient, {.ui = 1}}, // kill unselect
     {MODKEY | ShiftMask | ControlMask, XK_c, killclient, {.ui = 2}}, // killall
-    // application bindings
+    /* application bindings */
     {MODKEY, XK_w, spawn, {.v = (const char *[]){BROWSER, NULL}}},
     {MODKEY | ControlMask | ShiftMask, XK_q, quit, {1}},
+
+    /* multi-monitor control */
+    {MODKEY, XK_bracketright, focusmon, {.i = -1}},
+    {MODKEY | ShiftMask, XK_bracketright, tagmon, {.i = -1}},
+    {MODKEY, XK_bracketleft, focusmon, {.i = +1}},
+    {MODKEY | ShiftMask, XK_bracketleft, tagmon, {.i = +1}},
 };
 
 /* button definitions */
