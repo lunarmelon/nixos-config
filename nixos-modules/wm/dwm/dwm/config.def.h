@@ -24,6 +24,14 @@ static const char dmenufont[] = "JetBrainsMono Nerd Font:size=10";
 static const char *brupcmd[] = {"sudo", "xbacklight", "-inc", "5", NULL};
 static const char *brdowncmd[] = {"sudo", "xbacklight", "-dec", "5", NULL};
 
+/* volume */
+static const char *mutecmd[] = {"wpctl", "set-mute", "@DEFAULT_AUDIO_SINK@",
+                                "toggle", NULL};
+static const char *volupcmd[] = {"wpctl", "set-volume", "@DEFAULT_AUDIO_SINK@",
+                                 "5%+", NULL};
+static const char *voldowncmd[] = {"wpctl", "set-volume",
+                                   "@DEFAULT_AUDIO_SINK@", "5%-", NULL};
+
 /* Catppuccin Mocha colors */
 static const char col_rosewater[] = "#f5e0dc";
 static const char col_flamingo[] = "#f2cdcd";
@@ -220,6 +228,11 @@ static const Key keys[] = {
     /* backlight control */
     {0, XF86XK_MonBrightnessUp, spawn, {.v = brupcmd}},
     {0, XF86XK_MonBrightnessDown, spawn, {.v = brdowncmd}},
+
+    /* volume control */
+    {0, XF86XK_AudioMute, spawn, {.v = mutecmd}},
+    {0, XF86XK_AudioLowerVolume, spawn, {.v = voldowncmd}},
+    {0, XF86XK_AudioRaiseVolume, spawn, {.v = volupcmd}},
 };
 
 /* button definitions */

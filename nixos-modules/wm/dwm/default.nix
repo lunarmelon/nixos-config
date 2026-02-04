@@ -18,9 +18,27 @@ in {
         settings = {
           order = [
             "battery"
+            "backlight"
+            "audio"
             "time"
           ];
           separator = " | ";
+          backlight = {
+            icons = [
+              "󰃞"
+              "󰃟"
+              "󰃠"
+            ];
+            template = "{ICO} {BL}%";
+          };
+          audio = {
+            icons = [
+              "󰕿"
+              "󰖀"
+              "󰕾"
+            ];
+            template = "{ICO} {VOL}%";
+          };
           time = {
             format = "%a %d-%b %H:%M ";
             update_seconds = true;
