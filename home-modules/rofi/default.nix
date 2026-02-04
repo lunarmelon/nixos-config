@@ -17,6 +17,16 @@ in {
       enable = true;
       font = "JetBrainsMono Nerd Font 12";
       terminal = "${pkgs.kitty}/bin/kitty";
+      extraConfig = {
+        modi = [
+          "drun"
+          "window"
+          "run"
+        ];
+        icon-theme = "WhiteSur-Dark";
+        show-icons = true;
+        drun-display-format = "{icon} {name}";
+      };
     };
   };
 }
