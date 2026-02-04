@@ -13,7 +13,7 @@ in {
   config = lib.mkIf cfg.enable {
     programs.waybar = {
       enable = true;
-      style = "";
+      style = ./style.css;
       settings = {
         mainBar = {
           modules-left = [
