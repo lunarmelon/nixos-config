@@ -32,6 +32,9 @@
         dmenu.enable = true;
       };
 
+      # Mango
+      mango.enable = true;
+
       # Style
       stylix.enable = true;
     };

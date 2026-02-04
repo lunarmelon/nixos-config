@@ -25,11 +25,14 @@ in {
         xdg-desktop-portal
       ];
     };
-    environment.systemPackages = [
-      pkgs.glib
-      pkgs.xdg-utils
-      pkgs.wf-recorder
-      pkgs.xwayland-satellite
+    environment.systemPackages = with pkgs; [
+      glib
+      xdg-utils
+      wf-recorder
+      xwayland-satellite
+      waybar
+      wmenu
+      swaybg
     ];
   };
 }
