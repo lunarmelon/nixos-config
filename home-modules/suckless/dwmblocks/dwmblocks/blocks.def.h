@@ -3,9 +3,9 @@
 static const Block blocks[] = {
     /*Icon*/ /*Command*/ /*Update Interval*/ /*Update Signal*/
     //{"Mem:", "free -h | awk '/^Mem/ { print $3\"/\"$2 }' | sed s/i//g", 30,
-    //0},
+    // 0},
 
-    {"", "date '+%a %b-%d %H:%M'", 60, 1},
+    {"", "date '+%a %d-%b %H:%M '", 60, 1},
 };
 
 // sets delimiter between status commands. NULL character ('\0') means no

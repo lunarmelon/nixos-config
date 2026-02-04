@@ -4,23 +4,29 @@
   pkgs,
   ...
 }: let
-  cfg = config.systemSettings.dwm.dwmblocks;
+  cfg = config.userSettings.suckless.dwmblocks;
   dwmblocks = pkgs.dwmblocks.overrideAttrs {
     src = ./dwmblocks;
+    preBuild = ''
+      rm -f blocks.h
+    '';
   };
 in {
   options = {
-    systemSettings.dwm.dwmblocks = {
+    userSettings.suckless.dwmblocks = {
       enable = lib.mkEnableOption "Enable dwmblocks";
     };
   };
   config = lib.mkIf cfg.enable {
-    environment.systemPackages = [
+    home.packages = [
       dwmblocks
     ];
     # Autostart dwmblocks
-    services.xserver.displayManager.sessionCommands = ''
-      dwmblocks &
-    '';
+    xsession = {
+      enable = true;
+      initExtra = ''
+        ${dwmblocks}/bin/dwmblocks &
+      '';
+    };
   };
 }

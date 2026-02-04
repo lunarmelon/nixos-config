@@ -18,7 +18,7 @@ in {
         windowManager.dwm = {
           enable = true;
           package = pkgs.dwm.overrideAttrs {
-            src = ./dwm;
+            src = ../../../home-modules/suckless/dwm;
           };
         };
       };

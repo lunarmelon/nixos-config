@@ -25,6 +25,12 @@
         npm.enable = true;
       };
 
+      # Suckless tools
+      suckless = {
+        #dwm-status.enable = true;
+        dwmblocks.enable = true;
+      };
+
       # Style
       stylix.enable = true;
     };

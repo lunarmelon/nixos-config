@@ -3,23 +3,23 @@
   lib,
   ...
 }: let
-  cfg = config.systemSettings.dwm.dwm-status;
+  cfg = config.userSettings.suckless.dwm-status;
 in {
   options = {
-    systemSettings.dwm.dwm-status = {
+    userSettings.suckless.dwm-status = {
       enable = lib.mkEnableOption "Enable dwm-status bar";
     };
   };
   config = {
     services.dwm-status = lib.mkIf cfg.enable {
       enable = true;
-      settings = {
-        order = [
-          "battery"
-          "backlight"
-          "audio"
-          "time"
-        ];
+      order = [
+        "battery"
+        "backlight"
+        "audio"
+        "time"
+      ];
+      extraConfig = {
         separator = " | ";
         backlight = {
           icons = [
