@@ -19,8 +19,6 @@ in {
           modules-left = [
             "ext/workspaces"
             "custom/sep"
-            "dwl/window#layout"
-            "custom/sep"
             "dwl/window#title"
           ];
           modules-right = [
@@ -32,8 +30,6 @@ in {
             "cpu"
             "custom/sep"
             "memory"
-            "custom/sep"
-            "disk"
             "custom/sep"
             "clock"
             "custom/sep"
@@ -54,6 +50,24 @@ in {
             path = "/";
             format = "Disk: {free}";
           };
+          battery = {
+            states = {
+              good = 95;
+              warning = 30;
+              critical = 15;
+            };
+            format = "Bat: {capacity}% {icon} {time}";
+            format-plugged = "{capacity}% ";
+            format-alt = "Bat {capacity}%";
+            format-time = "{H}:{M}";
+            format-icons = [
+              ""
+              ""
+              ""
+              ""
+              ""
+            ];
+          };
           network = {
             format = "Online";
             format-disconnected = "Disconnected";
@@ -63,6 +77,19 @@ in {
             ignore-hidden = false;
             on-click = "activate";
             sort-by-id = true;
+          };
+          "dwl/tags" = {
+            num-tags = 9;
+          };
+          "dwl/window#layout" = {
+            format = "[{layout}]";
+          };
+          "dwl/window#title" = {
+            format = "{title}";
+          };
+          "custom/sep" = {
+            format = "|";
+            interval = 0;
           };
         };
       };
