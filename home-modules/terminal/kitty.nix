@@ -12,6 +12,7 @@ in {
     };
   };
   config = lib.mkIf cfg.enable {
+    catppuccin.kitty.enable = true;
     programs.kitty = {
       enable = true;
       enableGitIntegration = true;
@@ -21,7 +22,7 @@ in {
         size = 14;
       };
       # Color theme
-      themeFile = "Catppuccin-Mocha";
+      #themeFile = "Catppuccin-Mocha";
       settings = {
         # Mouse
         mouse_hide_wait = 10.0;
