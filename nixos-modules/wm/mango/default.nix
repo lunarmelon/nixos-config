@@ -14,20 +14,6 @@ in {
   config = lib.mkIf cfg.enable {
     programs.dconf.enable = true;
     programs.mango.enable = true;
-    catppuccin = {
-      sddm = {
-        enable = true;
-        font = "Fira Sans";
-        fontSize = "12";
-      };
-    };
-    services.displayManager.sddm = {
-      enable = true;
-      wayland = {
-        enable = true;
-        compositor = "kwin";
-      };
-    };
     xdg.portal = {
       enable = true;
       xdgOpenUsePortal = true;
@@ -45,6 +31,7 @@ in {
       wf-recorder
       xwayland-satellite
       swaybg
+      bibata-cursors
     ];
   };
 }

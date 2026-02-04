@@ -26,21 +26,23 @@
         #firejail.enable = true;
       };
 
-      # Programming
+      # Programming utilities
       programming.enable = true;
 
-      # WM
+      # Window managers and wayland compositors
       #awesome.enable = true;
       dwm.enable = true;
       mango.enable = true;
 
-      # Style
+      # Display managers
+      sddm.enable = true;
+
+      # Stylix
       stylix = {
         enable = true;
         theme = "catppuccin-mocha";
       };
     };
-
     users.users.melon.description = "Melon";
   };
 }
