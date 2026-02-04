@@ -38,6 +38,9 @@
       # Waybar
       waybar.enable = true;
 
+      # Rofi
+      rofi.enable = true;
+
       # Style
       stylix.enable = true;
     };

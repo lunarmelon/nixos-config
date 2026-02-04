@@ -29,9 +29,7 @@ in {
       glib
       xdg-utils
       wf-recorder
-      wlr-randr
       xwayland-satellite
-      wmenu
       swaybg
     ];
   };
