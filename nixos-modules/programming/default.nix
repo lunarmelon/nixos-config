@@ -14,9 +14,12 @@ in {
   config = lib.mkIf cfg.enable {
     environment.systemPackages = with pkgs; [
       cargo
+      clang
       dotnet-sdk_10
+      gnumake
       go
       libgcc
+      llvmPackages.libcxxClang
       lua
       luarocks
       perl
