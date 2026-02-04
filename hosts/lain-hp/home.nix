@@ -27,8 +27,8 @@
 
       # Suckless tools
       suckless = {
-        #dwm-status.enable = true;
-        dwmblocks.enable = true;
+        dwm-status.enable = true;
+        #dwmblocks.enable = true;
         dmenu.enable = true;
       };
 
