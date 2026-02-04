@@ -29,6 +29,7 @@
       suckless = {
         #dwm-status.enable = true;
         dwmblocks.enable = true;
+        dmenu.enable = true;
       };
 
       # Style

@@ -17,7 +17,8 @@ static const int showlayout = 1;        /* 0 means no layout indicator */
 static const int showstatus = 1;        /* 0 means no status bar */
 static const int showfloating = 0;      /* 0 means no floating indicator */
 static const int topbar = 1;            /* 0 means bottom bar */
-static const char *fonts[] = {"JetBrainsMono Nerd Font:size=11"};
+static const char *fonts[] = {
+    "JetBrainsMono Nerd Font:size=11:antialias=true:autohint=true"};
 static const char dmenufont[] = "JetBrainsMono Nerd Font:size=10";
 
 /* backlight */
@@ -149,7 +150,7 @@ static char dmenumon[2] =
     "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = {"dmenu_run", "-m",  dmenumon,      "-fn",
                                  dmenufont,   "-nb", col_crust,     "-nf",
-                                 col_base,    "-sb", custom_color1, "-sf",
+                                 col_text,    "-sb", custom_color1, "-sf",
                                  col_text,    NULL};
 static const char *termcmd[] = {"kitty", NULL};
 
