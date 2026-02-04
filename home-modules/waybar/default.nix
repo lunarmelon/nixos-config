@@ -42,6 +42,28 @@ in {
           clock = {
             format-alt = "{:%Y-%m-%d}";
           };
+          cpu = {
+            format = "CPU: {usage}%";
+            tooltip = false;
+          };
+          memory = {
+            format = "Mem: {used}GiB";
+          };
+          disk = {
+            interval = 60;
+            path = "/";
+            format = "Disk: {free}";
+          };
+          network = {
+            format = "Online";
+            format-disconnected = "Disconnected";
+          };
+          "ext/workspaces" = {
+            format = "{icon}";
+            ignore-hidden = false;
+            on-click = "activate";
+            sort-by-id = true;
+          };
         };
       };
     };
