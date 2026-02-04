@@ -11,6 +11,7 @@ in {
     };
   };
   config = lib.mkIf cfg.enable {
+    catppuccin.alacritty.enable = true;
     programs.alacritty = {
       enable = true;
       settings.cursor = {

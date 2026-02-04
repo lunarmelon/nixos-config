@@ -11,6 +11,7 @@ in {
     };
   };
   config = lib.mkIf cfg.enable {
+    catppuccin.lazygit.enable = true;
     programs.lazygit = {
       enable = true;
       # settings = {
