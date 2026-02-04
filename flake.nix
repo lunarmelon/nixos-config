@@ -26,6 +26,8 @@
       url = "github:DreamMaoMao/mango";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # Catppuccin
+    catppuccin.url = "github:catppuccin/nix";
   };
 
   outputs = inputs @ {self, ...}: let
@@ -105,6 +107,9 @@
             # mango
             inputs.mango.nixosModules.mango
 
+            #m catppuccin
+            inputs.catppuccin.nixosModules.catppuccin
+
             # home manager
             inputs.home-manager.nixosModules.home-manager
             {
@@ -114,6 +119,7 @@
                 sharedModules = [
                   inputs.nixvim.homeModules.nixvim
                   inputs.mango.hmModules.mango
+                  inputs.catppuccin.homeModules.catppuccin
                 ];
                 extraSpecialArgs = {
                   inherit pkgs;
