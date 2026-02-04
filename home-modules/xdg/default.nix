@@ -37,6 +37,7 @@
 in {
   xdg = {
     enable = true;
+    mime.enable = true;
     mimeApps = {
       enable = true;
       defaultApplications = associations;
@@ -49,9 +50,19 @@ in {
     portal = {
       enable = true;
       xdgOpenUsePortal = true;
-      extraPortals = with pkgs; [kdePackages.xdg-desktop-portal-kde];
-      config.common.default = "kde";
+      extraPortals = with pkgs; [xdg-desktop-portal-gtk xdg-desktop-portal-wlr];
+      config = {
+        common.default = "gtk";
+        pantheon = {
+          default = [
+            "pantheon"
+            "gtk"
+          ];
+          "org.freedesktop.impl.portal.Secret" = [
+            "gnome-keyring"
+          ];
+        };
+      };
     };
-    configFile."mimeapps.list".force = true;
   };
 }

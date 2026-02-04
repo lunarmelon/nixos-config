@@ -11,7 +11,10 @@ in {
     };
   };
   config = lib.mkIf cfg.enable {
-    services.cliphist.enable = true;
+    services = {
+      cliphist.enable = true;
+      gnome-keyring.enable = true;
+    };
     xdg.configFile."mango/config.conf".source = ./config.conf;
   };
 }
