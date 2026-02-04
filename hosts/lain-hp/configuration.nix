@@ -31,7 +31,10 @@
 
       # WM
       #awesome.enable = true;
-      dwm.enable = true;
+      dwm = {
+        enable = true;
+        dwm-status.enable = true;
+      };
       mango.enable = true;
 
       # Style
