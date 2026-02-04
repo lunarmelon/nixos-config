@@ -13,7 +13,7 @@
 
       # Software
       flatpak.enable = true;
-      plasma.enable = true;
+      #plasma.enable = true;
       prism-launcher.enable = true;
       steam.enable = true;
       strawberry.enable = true;

@@ -13,7 +13,17 @@ in {
   };
   config = lib.mkIf cfg.enable {
     programs.mango.enable = true;
-
+    catppuccin = {
+      sddm = {
+        enable = true;
+        font = "Fira Sans";
+        fontSize = "12";
+      };
+    };
+    services.displayManager.sddm = {
+      enable = true;
+      wayland.enable = true;
+    };
     xdg.portal = {
       enable = true;
       xdgOpenUsePortal = true;

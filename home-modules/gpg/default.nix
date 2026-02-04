@@ -14,7 +14,7 @@ in {
   config = lib.mkIf cfg.enable {
     services.gpg-agent = {
       enable = true;
-      pinentry.package = pkgs.pinentry-qt;
+      pinentry.package = pkgs.pinentry-rofi;
     };
     programs.gpg = {
       enable = true;

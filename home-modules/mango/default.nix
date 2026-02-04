@@ -11,6 +11,7 @@ in {
     };
   };
   config = lib.mkIf cfg.enable {
+    services.cliphist.enable = true;
     xdg.configFile."mango/config.conf".source = ./config.conf;
   };
 }
