@@ -35,6 +35,9 @@
       # Mango
       mango.enable = true;
 
+      # Waybar
+      waybar.enable = true;
+
       # Style
       stylix.enable = true;
     };
