@@ -33,7 +33,8 @@
       #awesome.enable = true;
       dwm = {
         enable = true;
-        dwm-status.enable = true;
+        #dwm-status.enable = true;
+        dwmblocks.enable = true;
       };
       mango.enable = true;
 
