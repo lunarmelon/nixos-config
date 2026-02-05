@@ -25,19 +25,19 @@ window#waybar {
 
 #workspaces button {
     padding: 0 6px;
-    color: @cyn;
+    color: @cstm;
     background: transparent;
     border-bottom: 3px solid @bg;
 }
 #workspaces button.active {
-    color: @cstm;
+    color: @mag;
     border-bottom: 3px solid @mag;
 }
 #workspaces button.hidden {
     color: @white;
 }
 #workspaces button.hidden.active {
-    color: @cyn;
+    color: @cstm;
     border-bottom: 3px solid @mag;
 }
 
