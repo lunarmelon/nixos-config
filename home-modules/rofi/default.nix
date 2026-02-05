@@ -26,6 +26,26 @@ in {
         icon-theme = "WhiteSur-Dark";
         show-icons = true;
         drun-display-format = "{icon} {name}";
+        disable-history = false;
+        sidebar-mode = false;
+        display-drun = " ";
+        display-run = " ";
+        display-window = " ";
+
+        # adding vim keybindings
+        kb-row-up = "Up,Control+k";
+        kb-row-left = "Left,Control+h";
+        kb-row-right = "Right,Control+l";
+        kb-row-down = "Down,Control+j";
+
+        kb-accept-entry = "Control+z,Control+y,Return,KP_Enter";
+
+        # fixing up
+        kb-remove-to-eol = "";
+        kb-move-char-back = "Control+b";
+        kb-remove-char-back = "BackSpace";
+        kb-move-char-forward = "Control+f";
+        kb-mode-complete = "Control+o";
       };
     };
   };
