@@ -52,11 +52,19 @@ in {
       enable = true;
       timeouts = [
         {
-          timeout = 20;
+          # Turnoff screen
+          timeout = 180;
+          command = "${pkgs.wlopm}/bin/wlopm --off '*'";
+          resumeCommand = "${pkgs.wlopm}/bin/wlopm --on '*'";
+        }
+        {
+          # Lock the screen
+          timeout = 300;
           command = "${pkgs.swaylock-effects}/bin/swaylock";
         }
         {
-          timeout = 30;
+          # Suspend
+          timeout = 600;
           command = "${pkgs.systemd}/bin/systemctl suspend";
         }
       ];
