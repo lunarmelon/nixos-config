@@ -43,6 +43,9 @@
       # Rofi
       rofi.enable = true;
 
+      # File managers
+      yazi.enable = true;
+
       # Stylix
       stylix.enable = true;
     };
