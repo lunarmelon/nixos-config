@@ -19,7 +19,7 @@
       obs.enable = true;
       oh-my-posh.enable = true;
 
-      # Programming
+      # Programming utilities
       programming = {
         bun.enable = true;
         npm.enable = true;
@@ -41,7 +41,10 @@
       # Rofi
       rofi.enable = true;
 
-      # Style
+      # Wlogout
+      wlogout.enable = true;
+
+      # Stylix
       stylix.enable = true;
     };
   };
