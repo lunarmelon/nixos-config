@@ -13,20 +13,6 @@ in {
   };
   config = lib.mkIf cfg.enable {
     catppuccin.swaylock.enable = true;
-    # Apparently, swayidle starts before mango, so it doesn't "see" the wayland session.
-    # We need to force swayidle to wait until the wayland session has started.
-    systemd.user.services.swayidle = {
-      Unit = {
-        After = ["graphical-session.target"];
-        ConditionEnvironment = lib.mkForce "";
-      };
-      Service = {
-        Environment = lib.mkForce "WAYLAND_DISPLAY=wayland-0";
-        ExecStartPre = "${pkgs.coreutils}/bin/sleep 2";
-        RestartSec = "5s";
-      };
-      Install.WantedBy = ["graphical-session.target"];
-    };
     programs.swaylock = {
       enable = true;
       package = pkgs.swaylock-effects;
@@ -52,25 +38,19 @@ in {
       enable = true;
       timeouts = [
         {
-          # Turnoff screen
-          timeout = 180;
-          command = "${pkgs.wlopm}/bin/wlopm --off '*'";
-          resumeCommand = "${pkgs.wlopm}/bin/wlopm --on '*'";
-        }
-        {
           # Lock the screen
-          timeout = 300;
-          command = "${pkgs.swaylock-effects}/bin/swaylock";
+          timeout = 60;
+          command = "${pkgs.swaylock-effects}/bin/swaylock -fF";
         }
         {
           # Suspend
-          timeout = 600;
+          timeout = 90;
           command = "${pkgs.systemd}/bin/systemctl suspend";
         }
       ];
       events = {
-        "before-sleep" = "${pkgs.swaylock-effects}/bin/swaylock";
-        "lock" = "${pkgs.swaylock-effects}/bin/swaylock";
+        "before-sleep" = "${pkgs.swaylock-effects}/bin/swaylock -fF";
+        "lock" = "lock";
       };
     };
   };
