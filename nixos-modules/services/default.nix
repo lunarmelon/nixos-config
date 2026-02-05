@@ -13,6 +13,7 @@
     udev.enable = true;
   };
   security = {
+    pam.services.swaylock = {}; # for swaylock to work
     sudo-rs = {
       enable = true;
       extraRules = [
