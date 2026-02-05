@@ -35,14 +35,13 @@
       # Mango
       mango.enable = true;
 
-      # Waybar
+      # Wayland utils
+      swaylock.enable = true;
       waybar.enable = true;
+      wleave.enable = true;
 
       # Rofi
       rofi.enable = true;
-
-      # Wlogout
-      wlogout.enable = true;
 
       # Stylix
       stylix.enable = true;
