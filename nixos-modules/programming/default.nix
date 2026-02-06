@@ -18,6 +18,7 @@ in {
       dotnet-sdk_10
       gnumake
       go
+      jdk
       libgcc
       llvmPackages.libcxxClang
       lua
