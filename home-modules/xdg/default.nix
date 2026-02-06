@@ -2,9 +2,11 @@
   browser = ["librewolf.desktop" "chromium.desktop"];
   editor = ["nvim.desktop"];
   terminal = ["kitty.desktop"];
+  viewer = ["zathura.desktop"];
   video = ["mpv.desktop"];
   associations = {
     "application/json" = editor;
+    "application/pdf" = viewer;
     "application/rss+xml" = editor;
     "application/x-extension-htm" = browser;
     "application/x-extension-html" = browser;
@@ -14,6 +16,7 @@
     "application/x-extension-xht" = browser;
     "application/x-extension-xhtml" = browser;
     "application/x-flac" = video;
+    "application/x-pdf" = viewer;
     "application/x-quicktime-media-link" = video;
     "application/x-quicktimeplayer" = video;
     "application/x-shellscript" = editor;

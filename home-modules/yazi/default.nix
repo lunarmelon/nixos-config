@@ -14,6 +14,29 @@ in {
     catppuccin.yazi.enable = true;
     programs.yazi = {
       enable = true;
+      settings = {
+        opener = {
+          pdff = [
+            {
+              run = ''zathura "$@"'';
+              desc = "zathura";
+              block = true;
+              for = "unix";
+            }
+          ];
+        };
+        open = {
+          rules = [
+            {
+              mime = "application/pdf";
+              use = [
+                "pdff"
+                "reveal"
+              ];
+            }
+          ];
+        };
+      };
     };
   };
 }
