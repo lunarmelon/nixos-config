@@ -57,6 +57,8 @@ button:hover {
 #memory,
 #disk,
 #network,
+#
+#wireplumber,
 #tray {
     padding: 0 8px;
     color: @white;
@@ -72,8 +74,8 @@ button:hover {
 }
 
 #battery {
-    color: @blu;
-    border-bottom: 4px solid @blu;
+    color: @grn;
+    border-bottom: 4px solid @grn;
 }
 
 #disk {
@@ -96,8 +98,9 @@ button:hover {
     border-bottom: 4px solid @red;
 }
 
-#network.disconnected {
-    background-color: @red;
+#wireplumber {
+  color: @white;
+  border-bottom: 4px solid @white;
 }
 
 #tray {

@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }: let
   cfg = config.userSettings.waybar;
@@ -11,6 +12,9 @@ in {
     };
   };
   config = lib.mkIf cfg.enable {
+    home.packages = with pkgs; [
+      easyeffects
+    ];
     programs.waybar = {
       enable = true;
       style = ./style.css;
@@ -23,9 +27,11 @@ in {
           ];
           modules-right = [
             "custom/sep"
-            "battery"
+            "wireplumber"
             "custom/sep"
             "network"
+            "custom/sep"
+            "battery"
             "custom/sep"
             "clock"
             "custom/sep"
@@ -52,9 +58,9 @@ in {
               warning = 30;
               critical = 15;
             };
-            format = "Bat: {capacity}% {icon} {time}";
-            format-plugged = "{capacity}% ";
-            format-alt = "Bat {capacity}%";
+            format = "{icon} {capacity}%";
+            format-plugged = " {capacity}%";
+            format-alt = "{capacity}%";
             format-time = "{H}:{M}";
             format-icons = [
               ""
@@ -67,6 +73,21 @@ in {
           network = {
             format = "Online";
             format-disconnected = "Disconnected";
+          };
+          wireplumber = {
+            format = "{volume}% {icon}";
+            format-bluetooth = "{volume}% ";
+            format-muted = "";
+            format-icons = {
+              headphone = "";
+              headset = "󰋎";
+              default = [
+                ""
+                ""
+              ];
+            };
+            on-click = "easyeffects";
+            on-click-right = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
           };
           "ext/workspaces" = {
             format = "{icon}";
