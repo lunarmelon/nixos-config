@@ -32,6 +32,7 @@ in {
       xwayland-satellite
       swaybg
       bibata-cursors
+      networkmanagerapplet
     ];
   };
 }
