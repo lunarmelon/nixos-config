@@ -38,7 +38,9 @@ in {
             "tray"
           ];
           clock = {
-            format-alt = "{:%Y-%m-%d}";
+            format = "{:%I:%M %p}";
+            format-alt = "{:%a %d-%b}";
+            tooltip = false;
           };
           cpu = {
             format = "CPU: {usage}%";
@@ -107,6 +109,7 @@ in {
           "custom/sep" = {
             format = "|";
             interval = 0;
+            tooltip = false;
           };
         };
       };
