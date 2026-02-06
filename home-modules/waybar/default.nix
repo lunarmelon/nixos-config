@@ -75,6 +75,7 @@ in {
           network = {
             format = "Online";
             format-disconnected = "Disconnected";
+            on-click = "~/nixos-config/scripts/wifimenu.sh -J -w --rofi";
           };
           pulseaudio = {
             format = "{volume}% {icon}";
