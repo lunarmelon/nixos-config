@@ -12,6 +12,7 @@ in {
     };
   };
   config = lib.mkIf cfg.enable {
+    catppuccin.chromium.enable = true;
     programs.chromium = {
       enable = true;
       package = pkgs.ungoogled-chromium;

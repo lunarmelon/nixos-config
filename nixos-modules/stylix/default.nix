@@ -45,8 +45,8 @@ in {
         };
       };
       targets = {
-        chromium.enable = true;
-        console.enable = true;
+        #chromium.enable = true;
+        #console.enable = true;
       };
     };
   };
