@@ -1,12 +1,10 @@
 {pkgs, ...}: {
-  home.packages = with pkgs; [
-    whitesur-icon-theme
-  ];
+  catppuccin.gtk.icon.enable = true;
   gtk = {
-    enable = true;
-    iconTheme = {
-      name = "WhiteSur-dark";
-      package = pkgs.whitesur-icon-theme;
-    };
+    # enable = true;
+    # iconTheme = {
+    #   name = "Papirus-Dark";
+    #   package = pkgs.papirus-icon-theme;
+    # };
   };
 }

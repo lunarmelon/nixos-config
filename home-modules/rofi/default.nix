@@ -23,7 +23,7 @@ in {
           "window"
           "run"
         ];
-        icon-theme = "WhiteSur-Dark";
+        icon-theme = "Papirus Dark";
         show-icons = true;
         drun-display-format = "{icon} {name}";
         disable-history = false;
