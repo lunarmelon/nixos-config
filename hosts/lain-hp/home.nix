@@ -46,6 +46,9 @@
       # File managers
       yazi.enable = true;
 
+      # PDF viewer
+      zathura.enable = true;
+
       # Stylix
       stylix.enable = true;
     };
