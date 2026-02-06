@@ -11,6 +11,7 @@ in {
     };
   };
   config = lib.mkIf cfg.enable {
+    catppuccin.yazi.enable = true;
     programs.yazi = {
       enable = true;
     };
