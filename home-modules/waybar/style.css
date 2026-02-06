@@ -57,8 +57,7 @@ button:hover {
 #memory,
 #disk,
 #network,
-#
-#wireplumber,
+#pulseaudio,
 #tray {
     padding: 0 8px;
     color: @white;
@@ -98,7 +97,7 @@ button:hover {
     border-bottom: 4px solid @red;
 }
 
-#wireplumber {
+#pulseaudio {
   color: @white;
   border-bottom: 4px solid @white;
 }

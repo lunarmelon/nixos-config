@@ -27,7 +27,7 @@ in {
           ];
           modules-right = [
             "custom/sep"
-            "wireplumber"
+            "pulseaudio"
             "custom/sep"
             "network"
             "custom/sep"
@@ -76,7 +76,7 @@ in {
             format = "Online";
             format-disconnected = "Disconnected";
           };
-          wireplumber = {
+          pulseaudio = {
             format = "{volume}% {icon}";
             format-bluetooth = "{volume}% ";
             format-muted = "";
