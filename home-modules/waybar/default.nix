@@ -26,6 +26,7 @@ in {
             "dwl/window#title"
           ];
           modules-right = [
+            "idle_inhibitor"
             "custom/sep"
             "pulseaudio"
             "custom/sep"
@@ -92,6 +93,13 @@ in {
             };
             on-click = "pavucontrol";
             on-click-right = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
+          };
+          idle_inhibitor = {
+            format = "{icon}";
+            format-icons = {
+              activated = "";
+              deactivated = "";
+            };
           };
           "ext/workspaces" = {
             format = "{icon}";

@@ -58,6 +58,7 @@ button:hover {
 #disk,
 #network,
 #pulseaudio,
+#idle_inhibitor,
 #tray {
     padding: 0 8px;
     color: @white;
@@ -103,5 +104,5 @@ button:hover {
 }
 
 #tray {
-    background-color: @cstm;
+    background-color: transparent;
 }
