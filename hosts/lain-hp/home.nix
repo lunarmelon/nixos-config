@@ -39,6 +39,7 @@
       mango.enable = true;
 
       # Wayland utils
+      screenshot.enable = true;
       swaylock.enable = true;
       waybar.enable = true;
       wleave.enable = true;

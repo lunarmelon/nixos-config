@@ -27,7 +27,7 @@ in {
           timeout = 2;
           follow = "mouse";
           width = 300;
-          height = 80;
+          #height = 80;
           origin = "top-right";
           offset = "14x14";
           corner_radius = 5;
