@@ -13,7 +13,7 @@ in {
   };
   config = lib.mkIf cfg.enable {
     home.packages = with pkgs; [
-      easyeffects
+      pavucontrol
     ];
     programs.waybar = {
       enable = true;
@@ -90,7 +90,7 @@ in {
                 ""
               ];
             };
-            on-click = "easyeffects";
+            on-click = "pavucontrol";
             on-click-right = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
           };
           "ext/workspaces" = {
