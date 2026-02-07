@@ -43,6 +43,7 @@
       swaylock.enable = true;
       waybar.enable = true;
       wleave.enable = true;
+      wlsunset.enable = true;
 
       # Notification
       dunst.enable = true;
