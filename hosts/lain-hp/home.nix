@@ -18,6 +18,9 @@
       nvim.enable = true;
       obs.enable = true;
       oh-my-posh.enable = true;
+      rofi.enable = true;
+      yazi.enable = true;
+      zathura.enable = true;
 
       # Programming utilities
       programming = {
@@ -32,7 +35,7 @@
         dmenu.enable = true;
       };
 
-      # Mango
+      # Mango config
       mango.enable = true;
 
       # Wayland utils
@@ -40,14 +43,8 @@
       waybar.enable = true;
       wleave.enable = true;
 
-      # Rofi
-      rofi.enable = true;
-
-      # File managers
-      yazi.enable = true;
-
-      # PDF viewer
-      zathura.enable = true;
+      # Notification
+      dunst.enable = true;
 
       # Stylix
       stylix.enable = true;
