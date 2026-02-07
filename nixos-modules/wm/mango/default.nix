@@ -12,6 +12,7 @@ in {
     };
   };
   config = lib.mkIf cfg.enable {
+    services.upower.enable = true;
     programs.dconf.enable = true;
     programs.mango.enable = true;
     xdg.portal = {
