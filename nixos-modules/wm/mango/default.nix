@@ -15,17 +15,6 @@ in {
     services.upower.enable = true;
     programs.dconf.enable = true;
     programs.mango.enable = true;
-    xdg.portal = {
-      enable = true;
-      xdgOpenUsePortal = true;
-      config.common.default = ["gtk"];
-      wlr.enable = true;
-      extraPortals = with pkgs; [
-        xdg-desktop-portal-gtk
-        xdg-desktop-portal-wlr
-        xdg-desktop-portal
-      ];
-    };
     environment.systemPackages = with pkgs; [
       glib
       xdg-utils
