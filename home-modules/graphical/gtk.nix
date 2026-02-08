@@ -4,10 +4,11 @@
   ...
 }: {
   home.packages = with pkgs; [
-    sassc
-    gtk-engine-murrine
     gnome-themes-extra
   ];
+  home.sessionVariables = {
+    GTK_THEME = "Yaru-purple-dark";
+  };
   gtk = {
     enable = true;
     colorScheme = "dark";
@@ -20,9 +21,6 @@
       name = "Yaru-purple-dark";
     };
     gtk3 = {
-      bookmarks = [
-        "file:///tmp"
-      ];
       extraConfig.gtk-application-prefer-dark-theme = true;
     };
   };
@@ -31,6 +29,7 @@
   };
   # GTK4 Setup
   dconf.settings."org/gnome/desktop/interface" = {
+    document-font-name = "Fira Sans 11";
     gtk-theme = lib.mkForce "Yaru-purple-dark";
     color-scheme = "prefer-dark";
   };
