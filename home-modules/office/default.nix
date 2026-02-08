@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     onlyoffice-desktopeditors
-    libreoffice-qt-still
+    libreoffice-fresh
   ];
 }
