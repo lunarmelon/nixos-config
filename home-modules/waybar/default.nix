@@ -28,6 +28,8 @@ in {
           modules-right = [
             "idle_inhibitor"
             "custom/sep"
+            "custom/layout"
+            "custom/sep"
             "pulseaudio"
             "custom/sep"
             "network"
@@ -119,6 +121,13 @@ in {
           "custom/sep" = {
             format = "|";
             interval = 0;
+            tooltip = false;
+          };
+          "custom/layout" = {
+            exec = "mmsg -k | grep kb_layout | head -n 1 | awk '{print $NF}' | tr '[:lower:]' '[:upper:]'";
+            interval = 3;
+            format = "{}";
+            signal = 1;
             tooltip = false;
           };
         };
