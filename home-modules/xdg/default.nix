@@ -1,13 +1,23 @@
 {pkgs, ...}: let
   browser = ["librewolf.desktop" "chromium.desktop"];
   editor = ["nvim.desktop"];
+  office = ["onlyoffice-desktopeditors.desktop"];
   terminal = ["kitty.desktop"];
   viewer = ["zathura.desktop"];
   video = ["mpv.desktop"];
   associations = {
     "application/json" = editor;
+    "application/msword" = office;
     "application/pdf" = viewer;
     "application/rss+xml" = editor;
+    "application/vnd.ms-excel" = office;
+    "application/vnd.ms-powerpoint" = office;
+    "application/vnd.oasis.opendocument.presentation" = office;
+    "application/vnd.oasis.opendocument.spreadsheet" = office;
+    "application/vnd.oasis.opendocument.text" = office;
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document" = office;
+    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" = office;
+    "application/vnd.openxmlformats-officedocument.presentationml.presentation" = office;
     "application/x-extension-htm" = browser;
     "application/x-extension-html" = browser;
     "application/x-extension-m4a" = video;
@@ -56,6 +66,9 @@ in {
       extraPortals = with pkgs; [xdg-desktop-portal-gtk xdg-desktop-portal-wlr];
       config = {
         common.default = "gtk";
+        mango = {
+          default = ["wlr"];
+        };
         pantheon = {
           default = [
             "pantheon"
