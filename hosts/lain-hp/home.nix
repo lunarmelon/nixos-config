@@ -15,6 +15,7 @@
       keepassxc.enable = true;
       lazygit.enable = true;
       librewolf.enable = true;
+      nemo.enable = true;
       nvim.enable = true;
       obs.enable = true;
       oh-my-posh.enable = true;
