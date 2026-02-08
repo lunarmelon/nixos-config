@@ -13,6 +13,9 @@ in {
   };
   config = lib.mkIf cfg.enable {
     programs = {
+      zoxide = {
+        enable = true;
+      };
       direnv = {
         enable = true;
         enableZshIntegration = true;
