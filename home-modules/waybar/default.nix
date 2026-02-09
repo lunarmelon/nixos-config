@@ -133,7 +133,7 @@ in {
           };
           "ext/workspaces" = {
             format = "{icon}";
-            ignore-hidden = false;
+            ignore-hidden = true;
             on-click = "activate";
             sort-by-id = true;
           };
