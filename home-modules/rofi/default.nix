@@ -22,15 +22,19 @@ in {
           "drun"
           "window"
           "run"
+          "clipboard:cliphist-rofi-img"
         ];
         icon-theme = "Papirus Dark";
         show-icons = true;
+        element-icon-size = "64";
         drun-display-format = "{icon} {name}";
+        clipboard-display-format = "{name}";
         disable-history = false;
         sidebar-mode = false;
         display-drun = " ";
         display-run = " ";
         display-window = " ";
+        display-clipboard = "󱘞 ";
 
         # adding vim keybindings
         kb-row-up = "Up,Control+k";

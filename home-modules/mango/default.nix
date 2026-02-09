@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }: let
   cfg = config.userSettings.mango;
@@ -11,9 +12,13 @@ in {
     };
   };
   config = lib.mkIf cfg.enable {
+    home.packages = with pkgs; [
+      wl-clipboard
+    ];
     services = {
       cliphist.enable = true;
       gnome-keyring.enable = true;
+      wl-clip-persist.enable = true;
     };
     xdg.configFile."mango/config.conf".source = ./config.conf;
   };
