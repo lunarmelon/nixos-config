@@ -25,7 +25,7 @@
           value = {
             isNormalUser = true;
             shell = pkgs.zsh;
-            extraGroups = ["networkmanager" "input" "dialout" "video" "render"] ++ (lib.optionals (lib.any (x: x == user) config.systemSettings.adminUsers) ["wheel"]);
+            extraGroups = ["networkmanager" "input" "dialout" "video" "render" "lp"] ++ (lib.optionals (lib.any (x: x == user) config.systemSettings.adminUsers) ["wheel"]);
           };
         })
         config.systemSettings.users);
