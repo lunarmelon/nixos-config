@@ -109,7 +109,7 @@ in {
           mpd = {
             format = "{stateIcon} {artist} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S})";
             format-disconnected = "󰝛 Disconnected";
-            format-stopped = "Stopped";
+            format-stopped = "";
             interval = 10;
             consume-icons = {
               on = "";
