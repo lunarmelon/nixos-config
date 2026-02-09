@@ -11,7 +11,33 @@ in {
     };
   };
   config = lib.mkIf cfg.enable {
-    # mpd tui
+    xdg.configFile."rmpc/themes/mocha.ron".text = ''
+      #![enable(implicit_some)]
+      #![enable(unwrap_newtypes)]
+      #![enable(unwrap_variant_newtypes)]
+      #![enable(implicit_some)]
+      #![enable(unwrap_newtypes)]
+      #![enable(unwrap_variant_newtypes)]
+      (
+        cava: (
+          orientation: Bottom,
+          bar_width: 1,
+          bar_spacing: 1,
+          bg_color: "#1e1e2e",
+          bar_color: Gradient({
+            0: "#94e2d5", // gradient_color_1 (Bottom - Teal)
+            14: "#89dceb", // gradient_color_2 (Sky)
+            28: "#74c7ec", // gradient_color_3 (Sapphire)
+            42: "#89b4fa", // gradient_color_4 (Blue)
+            57: "#cba6f7", // gradient_color_5 (Mauve)
+            71: "#f5c2e7", // gradient_color_6 (Pink)
+            85: "#eba0ac", // gradient_color_7 (Maroon)
+           100: "#f38ba8", // gradient_color_8 (Top - Red)
+          }),
+          bar_symbols: [' ', '▂', '▃', '▄', '▅', '▆', '▇', '█'],
+        ),
+      )
+    '';
     programs.rmpc = {
       enable = true;
       config = ''
@@ -20,6 +46,7 @@ in {
         #![enable(unwrap_variant_newtypes)]
         (
           address: "127.0.0.1:6600",
+          theme: "mocha",
           password: None,
           enable_config_hot_reload: true,
           cache_dir: None,
@@ -74,6 +101,36 @@ in {
                 ],
               ),
             ),
+        (
+            name: "Directories",
+            border_type: None,
+            pane: Pane(Directories),
+        ),
+        (
+            name: "Artists",
+            border_type: None,
+            pane: Pane(Artists),
+        ),
+        (
+            name: "Album Artists",
+            border_type: None,
+            pane: Pane(AlbumArtists),
+        ),
+        (
+            name: "Albums",
+            border_type: None,
+            pane: Pane(Albums),
+        ),
+        (
+            name: "Playlists",
+            border_type: None,
+            pane: Pane(Playlists),
+        ),
+        (
+            name: "Search",
+            border_type: None,
+            pane: Pane(Search),
+        ),
           ],
         )
       '';
