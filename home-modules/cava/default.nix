@@ -11,6 +11,7 @@ in {
     };
   };
   config = lib.mkIf cfg.enable {
+    catppuccin.cava.enable = true;
     programs.cava = {
       enable = true;
     };
