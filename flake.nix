@@ -80,9 +80,9 @@
     devShells.${system}.suckless = pkgs.mkShell {
       packages = with pkgs; [
         pkg-config
-        xorg.libX11
-        xorg.libXft
-        xorg.libXinerama
+        libx11
+        libxft
+        libxinerama
         fontconfig
         freetype
         harfbuzz

@@ -38,19 +38,19 @@
   programs.nix-ld = {
     enable = true;
     #Include libstdc++ in the nix-ld profile
-    libraries = [
-      pkgs.stdenv.cc.cc
-      pkgs.zlib
-      pkgs.fuse3
-      pkgs.icu
-      pkgs.nss
-      pkgs.openssl
-      pkgs.curl
-      pkgs.expat
-      pkgs.xorg.libX11
-      pkgs.vulkan-headers
-      pkgs.vulkan-loader
-      pkgs.vulkan-tools
+    libraries = with pkgs; [
+      stdenv.cc.cc
+      zlib
+      fuse3
+      icu
+      nss
+      openssl
+      curl
+      expat
+      libx11
+      vulkan-headers
+      vulkan-loader
+      vulkan-tools
     ];
   };
 
