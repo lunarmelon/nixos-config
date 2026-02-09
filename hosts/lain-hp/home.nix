@@ -8,6 +8,7 @@
       kitty.enable = true;
 
       # Programs
+      cava.enable = true;
       chromium.enable = true;
       fastfetch.enable = true;
       git.enable = true;
