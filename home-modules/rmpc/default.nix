@@ -15,6 +15,9 @@ in {
     programs.rmpc = {
       enable = true;
       config = ''
+        #![enable(implicit_some)]
+        #![enable(unwrap_newtypes)]
+        #![enable(unwrap_variant_newtypes)]
         (
           address: "127.0.0.1:6600",
           password: None,
@@ -34,6 +37,44 @@ in {
             vertical_align: Center,
             horizontal_align: Center,
           ),
+          cava: (
+            framerate: 60,
+            autosens: true,
+            sensitivity: 100,
+            lower_cutoff_freq: 50,
+            higher_cutoff_freq: 10000,
+            input: (
+              method: Fifo,
+              source: "/tmp/mpd.fifo",
+              sample_rate: 44100,
+              channels: 2,
+              sample_bits: 16,
+            ),
+            smoothing: (
+              noise_reduction: 77,
+              monstercat: false,
+              waves: false,
+            ),
+          eq: [],
+          ),
+          tabs: [
+            (
+              name: "Queue",
+              pane: Split(
+                direction: Horizontal,
+                panes: [
+                  (size: "40%", pane: Pane(AlbumArt)),
+                  (size: "60%", pane: Split(
+                    direction: Vertical,
+                      panes: [
+                        (size: "50%", pane: Pane(Queue)),
+                        (size: "50%", pane: Pane(Cava)),
+                      ],
+                  )),
+                ],
+              ),
+            ),
+          ],
         )
       '';
     };
