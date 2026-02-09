@@ -33,6 +33,8 @@ in {
             "custom/sep"
             "custom/layout"
             "custom/sep"
+            "bluetooth"
+            "custom/sep"
             "pulseaudio"
             "custom/sep"
             "network"
@@ -130,6 +132,15 @@ in {
             };
             tooltip-format = "MPD (connected)";
             tooltip-format-disconnected = "MPD (disconnected)";
+          };
+          bluetooth = {
+            format = " {status}";
+            format-disabled = "";
+            format-connected = " {num_connections} connected";
+            on-click = "blueman-manager";
+            tooltip-format = "{controller_alias}\t{controller_address}";
+            tooltip-format-connected = "{controller_alias}\t{controller_address}\n\n{device_enumerate}";
+            tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
           };
           "ext/workspaces" = {
             format = "{icon}";
