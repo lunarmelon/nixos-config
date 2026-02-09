@@ -52,7 +52,7 @@ button:hover {
 
 #clock,
 #custom-sep,
-#custom-layout
+#custom-layout,
 #battery,
 #cpu,
 #memory,
@@ -60,6 +60,7 @@ button:hover {
 #network,
 #pulseaudio,
 #idle_inhibitor,
+#mpd,
 #tray {
     padding: 0 8px;
     color: @white;

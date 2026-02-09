@@ -18,6 +18,7 @@ in {
     programs.waybar = {
       enable = true;
       style = ./style.css;
+      systemd.enable = true;
       settings = {
         mainBar = {
           modules-left = [
@@ -26,6 +27,8 @@ in {
             "dwl/window#title"
           ];
           modules-right = [
+            "mpd"
+            "custom/sep"
             "idle_inhibitor"
             "custom/sep"
             "custom/layout"
@@ -99,9 +102,34 @@ in {
           idle_inhibitor = {
             format = "{icon}";
             format-icons = {
-              activated = "";
-              deactivated = "";
+              activated = " ";
+              deactivated = " ";
             };
+          };
+          mpd = {
+            format = "{stateIcon} {artist} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S})";
+            format-disconnected = "󰝛 Disconnected";
+            format-stopped = "Stopped";
+            interval = 10;
+            consume-icons = {
+              on = "";
+            };
+            random-icons = {
+              off = "<span color=\"#f38ba8\"></span> "; # Mocha Red
+              on = "<span color=\"#a6e3a1\"></span> "; # Mocha Green
+            };
+            repeat-icons = {
+              on = "";
+            };
+            single-icons = {
+              on = "1";
+            };
+            state-icons = {
+              paused = "";
+              playing = "";
+            };
+            tooltip-format = "MPD (connected)";
+            tooltip-format-disconnected = "MPD (disconnected)";
           };
           "ext/workspaces" = {
             format = "{icon}";
