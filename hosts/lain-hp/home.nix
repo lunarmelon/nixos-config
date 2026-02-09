@@ -19,6 +19,7 @@
       nvim.enable = true;
       obs.enable = true;
       oh-my-posh.enable = true;
+      rmpc.enable = true;
       rofi.enable = true;
       yazi.enable = true;
       zathura.enable = true;
@@ -48,6 +49,9 @@
 
       # Notification
       dunst.enable = true;
+
+      # Music daemon
+      mpd.enable = true;
 
       # Stylix
       stylix.enable = true;
