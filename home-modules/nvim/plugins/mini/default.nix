@@ -5,7 +5,6 @@
   };
 
   imports = [
-    ./animate.nix
     ./clue.nix
     ./comment.nix
     ./files.nix
