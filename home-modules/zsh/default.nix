@@ -13,9 +13,6 @@ in {
   };
   config = lib.mkIf cfg.enable {
     programs = {
-      zoxide = {
-        enable = true;
-      };
       direnv = {
         enable = true;
         enableZshIntegration = true;
@@ -67,11 +64,11 @@ in {
         antidote = {
           enable = true;
           plugins = [
-            "Aloxaf/fzf-tab"
+            #"Aloxaf/fzf-tab"
             "zdharma-continuum/fast-syntax-highlighting"
             "marlonrichert/zsh-autocomplete"
             #"zsh-users/zsh-history-substring-search" # not compatible with zsh-autocomplete
-            "hlissner/zsh-autopair"
+            #"hlissner/zsh-autopair"
           ];
         };
         sessionVariables = {
