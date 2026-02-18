@@ -18,9 +18,9 @@ in {
     programs.waybar = {
       enable = true;
       style = ./style.css;
-      systemd.enable = true;
       settings = {
         mainBar = {
+          height = 2;
           modules-left = [
             "ext/workspaces"
             "custom/sep"
@@ -73,14 +73,20 @@ in {
           };
           network = {
             format = "Online";
+            format-wifi = "{essid} ({signalStrength}%) ";
+            format-ethernet = "Ethernet 󰈀";
             format-disconnected = "Disconnected";
             on-click = "~/nixos-config/scripts/wifimenu.sh -J -w --rofi";
             on-click-right = "nm-connection-editor";
+            tooltip-format = "{ifname} via {gwaddr} 󰈀";
+            tooltip-format-wifi = "{essid} ({signalStrength}%) ";
+            tooltip-format-ethernet = "{ifname} ";
+            tooltip-format-disconnected = "Disconnected";
           };
           pulseaudio = {
             format = "{volume}% {icon}";
             format-bluetooth = "{volume}% ";
-            format-muted = "";
+            format-muted = " ";
             format-icons = {
               headphone = "";
               headset = "󰋎";
@@ -125,7 +131,7 @@ in {
             tooltip-format = "MPD (connected)";
             tooltip-format-disconnected = "MPD (disconnected)";
             on-click = "rmpc togglepause";
-            on-click-right = "";
+            on-click-right = "rmpc next";
           };
           "ext/workspaces" = {
             format = "{icon}";
