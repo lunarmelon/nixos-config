@@ -14,8 +14,22 @@ in {
     catppuccin.alacritty.enable = true;
     programs.alacritty = {
       enable = true;
-      settings.cursor = {
-        style.shape = "Beam";
+      settings = {
+        window = {
+          opacity = 1;
+          padding.x = 10;
+          padding.y = 10;
+          decorations = "Full";
+          decorations_theme_variant = "Dark";
+        };
+        font = {
+          normal.family = "JetBrainsMono Nerd Font";
+          bold.family = "JetBrainsMono Nerd Font";
+          italic.family = "JetBrainsMono Nerd Font";
+          bold_italic.family = "JetBrainsMono Nerd Font";
+          size = 14;
+        };
+        cursor.style.shape = "Beam";
       };
     };
   };

@@ -8,6 +8,7 @@
       kitty.enable = true;
 
       # Programs
+      alacritty.enable = true;
       cava.enable = true;
       chromium.enable = true;
       fastfetch.enable = true;
