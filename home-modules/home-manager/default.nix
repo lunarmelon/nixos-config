@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   config = {
     home = {
-      stateVersion = "25.11";
+      stateVersion = "26.05";
       username = "melon";
       homeDirectory = "/home/melon";
       shell.enableZshIntegration = true;
