@@ -31,10 +31,6 @@ in {
             "custom/sep"
             "idle_inhibitor"
             "custom/sep"
-            "custom/layout"
-            "custom/sep"
-            "bluetooth"
-            "custom/sep"
             "pulseaudio"
             "custom/sep"
             "network"
@@ -50,34 +46,29 @@ in {
             format-alt = "{:%a %d-%b}";
             tooltip = false;
           };
-          cpu = {
-            format = "CPU: {usage}%";
-            tooltip = false;
-          };
-          memory = {
-            format = "Mem: {used}GiB";
-          };
-          disk = {
-            interval = 60;
-            path = "/";
-            format = "Disk: {free}";
-          };
           battery = {
             states = {
               good = 95;
               warning = 30;
               critical = 15;
             };
-            format = "{icon} {capacity}%";
-            format-plugged = " {capacity}%";
-            format-alt = "{capacity}%";
+            interval = 60;
+            format = "{icon}{capacity}%";
+            format-charging = "󱐋 {capacity}%";
+            format-plugged = "󰂄 {capacity}%";
+            format-alt = "{icon}%";
             format-time = "{H}:{M}";
             format-icons = [
-              ""
-              ""
-              ""
-              ""
-              ""
+              "󰁺 "
+              "󰁻 "
+              "󰁼 "
+              "󰁽 "
+              "󰁾 "
+              "󰁿 "
+              "󰂀 "
+              "󰂁 "
+              "󰂂 "
+              "󰁹 "
             ];
           };
           network = {
@@ -89,11 +80,12 @@ in {
           pulseaudio = {
             format = "{volume}% {icon}";
             format-bluetooth = "{volume}% ";
-            format-muted = "";
+            format-muted = "";
             format-icons = {
               headphone = "";
               headset = "󰋎";
               default = [
+                ""
                 ""
                 ""
               ];
@@ -132,15 +124,8 @@ in {
             };
             tooltip-format = "MPD (connected)";
             tooltip-format-disconnected = "MPD (disconnected)";
-          };
-          bluetooth = {
-            format = " {status}";
-            format-disabled = "";
-            format-connected = " {num_connections} connected";
-            on-click = "blueman-manager";
-            tooltip-format = "{controller_alias}\t{controller_address}";
-            tooltip-format-connected = "{controller_alias}\t{controller_address}\n\n{device_enumerate}";
-            tooltip-format-enumerate-connected = "{device_alias}\t{device_address}";
+            on-click = "rmpc togglepause";
+            on-click-right = "";
           };
           "ext/workspaces" = {
             format = "{icon}";
@@ -149,7 +134,7 @@ in {
             sort-by-id = true;
           };
           "dwl/tags" = {
-            num-tags = 9;
+            num-tags = 5;
           };
           "dwl/window#layout" = {
             format = "[{layout}]";
@@ -160,13 +145,6 @@ in {
           "custom/sep" = {
             format = "|";
             interval = 0;
-            tooltip = false;
-          };
-          "custom/layout" = {
-            exec = "mmsg -k | grep kb_layout | head -n 1 | awk '{print $NF}' | tr '[:lower:]' '[:upper:]'";
-            interval = 3;
-            format = "{}";
-            signal = 1;
             tooltip = false;
           };
         };
